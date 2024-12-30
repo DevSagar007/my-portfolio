@@ -10,7 +10,7 @@
 -----------------------------------------------------------------------------------*/
 
 
-$(function() {
+$(function () {
 
     "use strict";
 
@@ -37,17 +37,17 @@ $(function() {
     -----------------------------  Color Switch   -----------------------------
     ============================================================================= */
 
-    $(".setting-switch .switch-color li").on("click", function() {
+    $(".setting-switch .switch-color li").on("click", function () {
         $(":root").css("--maincolor", $(this).data("color"));
         $(".setting-switch .switch-color li").removeClass("active")
         $(this).addClass("active");
     });
 
-    $(".setting-switch .icon").on("click", function() {
+    $(".setting-switch .icon").on("click", function () {
         $(".setting-switch ").toggleClass("open");
     });
 
-    $("main").on("click", function() {
+    $("main").on("click", function () {
         $(".setting-switch ").removeClass("open");
     });
 
@@ -56,19 +56,19 @@ $(function() {
     --------------------------------  Navbar Menu   --------------------------------
     ============================================================================= */
 
-    $('.navbar .dropdown').hover(function() {
+    $('.navbar .dropdown').hover(function () {
         $(this).find('.dropdown-menu').addClass('show');
-    }, function() {
+    }, function () {
         $(this).find('.dropdown-menu').removeClass('show')
     });
 
-    $('.navbar .dropdown-item').hover(function() {
+    $('.navbar .dropdown-item').hover(function () {
         $(this).find('.dropdown-side').addClass('show');
-    }, function() {
+    }, function () {
         $(this).find('.dropdown-side').removeClass('show')
     });
 
-    $(".navbar .search-form").on("click", ".search-icon", function() {
+    $(".navbar .search-form").on("click", ".search-icon", function () {
 
         $(".navbar .search-form").toggleClass("open");
 
@@ -82,12 +82,12 @@ $(function() {
         }
     });
 
-    $(".navbar").on("click", ".navbar-toggler", function() {
+    $(".navbar").on("click", ".navbar-toggler", function () {
 
         $(".navbar .navbar-collapse").toggleClass("show");
     });
 
-    wind.on("scroll", function() {
+    wind.on("scroll", function () {
 
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar"),
@@ -115,7 +115,7 @@ $(function() {
     ============================================================================= */
 
     var pageSection = $(".bg-img, section");
-    pageSection.each(function(indx) {
+    pageSection.each(function (indx) {
 
         if ($(this).attr("data-background")) {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
@@ -127,7 +127,7 @@ $(function() {
     -----------------------------------  Tabs  -------------------------------------
     ============================================================================= */
 
-    $('#tabs .tab-links').on('click', '.item-link', function() {
+    $('#tabs .tab-links').on('click', '.item-link', function () {
 
         var tab_id = $(this).attr('data-tab');
 
@@ -139,7 +139,7 @@ $(function() {
 
     });
 
-    $('#tabs-fade .tab-links').on('click', '.item-link', function() {
+    $('#tabs-fade .tab-links').on('click', '.item-link', function () {
 
         var tab2_id = $(this).attr('data-tab');
 
@@ -156,7 +156,7 @@ $(function() {
     --------------------------------  Accordion  -----------------------------------
     ============================================================================= */
 
-    $(".accordion").on("click", ".title", function() {
+    $(".accordion").on("click", ".title", function () {
 
         $(this).next().slideDown();
 
@@ -164,7 +164,7 @@ $(function() {
 
     });
 
-    $(".accordion").on("click", ".item", function() {
+    $(".accordion").on("click", ".item", function () {
 
         $(this).addClass("active").siblings().removeClass("active");
 
@@ -175,22 +175,22 @@ $(function() {
     ---------------------------------  Tolltip  ------------------------------------
     ============================================================================= */
 
-    $('[data-tooltip-tit]').hover(function() {
+    $('[data-tooltip-tit]').hover(function () {
         $('<div class="div-tooltip-tit"></div>').text($(this).attr('data-tooltip-tit')).appendTo('body').fadeIn('slow');
-    }, function() {
+    }, function () {
         $('.div-tooltip-tit').remove();
-    }).mousemove(function(e) {
+    }).mousemove(function (e) {
         $('.div-tooltip-tit').css({
             top: e.pageY + 10,
             left: e.pageX + 20
         })
     });
 
-    $('[data-tooltip-sub]').hover(function() {
+    $('[data-tooltip-sub]').hover(function () {
         $('<div class="div-tooltip-sub"></div>').text($(this).attr('data-tooltip-sub')).appendTo('body').fadeIn('slow');
-    }, function() {
+    }, function () {
         $('.div-tooltip-sub').remove();
-    }).mousemove(function(e) {
+    }).mousemove(function (e) {
         $('.div-tooltip-sub').css({
             top: e.pageY + (-15),
             left: e.pageX + 30
@@ -202,8 +202,8 @@ $(function() {
     -------------------------------  Progress Bar  ---------------------------------
     ============================================================================= */
 
-    wind.on('scroll', function() {
-        $(".skill-progress .progres").each(function() {
+    wind.on('scroll', function () {
+        $(".skill-progress .progres").each(function () {
             var bottom_of_object =
                 $(this).offset().top + $(this).outerHeight();
             var bottom_of_window =
@@ -283,10 +283,10 @@ $(function() {
 -----------------------------  Parallax Animation  -----------------------------
 ============================================================================= */
 
-(function() {
+(function () {
     const link = document.querySelectorAll('.hover-this');
     const cursor = document.querySelector('.cursor');
-    const animateit = function(e) {
+    const animateit = function (e) {
         const hoverAnim = this.querySelector('.hover-anim');
         const {
             offsetX: x,
@@ -295,7 +295,7 @@ $(function() {
             offsetWidth: width,
             offsetHeight: height
         } = this,
-        move = 25,
+            move = 25,
             xMove = x / width * (move * 2) - move,
             yMove = y / height * (move * 2) - move;
         hoverAnim.style.transform = `translate(${xMove}px, ${yMove}px)`;
@@ -314,10 +314,10 @@ $(function() {
     window.addEventListener('mousemove', editCursor);
 
     $("a, .cursor-pointer").hover(
-        function() {
+        function () {
             $(".cursor").addClass("cursor-active");
         },
-        function() {
+        function () {
             $(".cursor").removeClass("cursor-active");
         }
     );
@@ -356,7 +356,7 @@ $(function() {
 ////////////////////////////////////////////////////////////////////////////////
 ============================================================================= */
 
-$(window).on("load", function() {
+$(window).on("load", function () {
 
 
     /* =============================================================================
@@ -365,7 +365,7 @@ $(window).on("load", function() {
 
     var body = $('body');
     body.addClass('loaded');
-    setTimeout(function() {
+    setTimeout(function () {
         body.removeClass('loaded');
     }, 1500);
 
@@ -380,14 +380,14 @@ $(window).on("load", function() {
 
     var $gallery = $('.gallery').isotope();
 
-    $('.filtering').on('click', 'span', function() {
+    $('.filtering').on('click', 'span', function () {
         var filterValue = $(this).attr('data-filter');
         $gallery.isotope({
             filter: filterValue
         });
     });
 
-    $('.filtering').on('click', 'span', function() {
+    $('.filtering').on('click', 'span', function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
 
@@ -398,7 +398,7 @@ $(window).on("load", function() {
 
     $('#contact-form').validator();
 
-    $('#contact-form').on('submit', function(e) {
+    $('#contact-form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
             var url = "contact.php";
 
@@ -406,7 +406,7 @@ $(window).on("load", function() {
                 type: "POST",
                 url: url,
                 data: $(this).serialize(),
-                success: function(data) {
+                success: function (data) {
                     var messageAlert = 'alert-' + data.type;
                     var messageText = data.message;
 
@@ -428,7 +428,7 @@ $(window).on("load", function() {
 -----------------------------  Button scroll up   ------------------------------
 ============================================================================= */
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     "use strict";
 
@@ -439,7 +439,7 @@ $(document).ready(function() {
     progressPath.style.strokeDashoffset = pathLength;
     progressPath.getBoundingClientRect();
     progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function() {
+    var updateProgress = function () {
         var scroll = $(window).scrollTop();
         var height = $(document).height() - $(window).height();
         var progress = pathLength - (scroll * pathLength / height);
@@ -449,14 +449,14 @@ $(document).ready(function() {
     $(window).scroll(updateProgress);
     var offset = 150;
     var duration = 550;
-    jQuery(window).on('scroll', function() {
+    jQuery(window).on('scroll', function () {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.progress-wrap').addClass('active-progress');
         } else {
             jQuery('.progress-wrap').removeClass('active-progress');
         }
     });
-    jQuery('.progress-wrap').on('click', function(event) {
+    jQuery('.progress-wrap').on('click', function (event) {
         event.preventDefault();
         jQuery('html, body').animate({
             scrollTop: 0
@@ -483,7 +483,7 @@ wow.init();
 ////////////////////////////////////////////////////////////////////////////////
 ============================================================================= */
 
-$(function() {
+$(function () {
 
 
     "use strict";
@@ -494,7 +494,7 @@ $(function() {
     ----------------------------  Swiper Data Controls   ---------------------------
     ============================================================================= */
 
-    $('[data-carousel="swiper"]').each(function() {
+    $('[data-carousel="swiper"]').each(function () {
 
         var containe = $(this).find('[data-swiper="container"]').attr('id');
         var pagination = $(this).find('[data-swiper="pagination"]').attr('id');
@@ -681,6 +681,9 @@ $(function() {
         };
     });
 
+    // Dynamically update the current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 
     /* =============================================================================
     -------------------------------  Preloader svg   -------------------------------
@@ -718,28 +721,28 @@ $(function() {
     });
     tl.from(
         "header", {
-            y: 200,
-        },
+        y: 200,
+    },
         "-=1.5"
     );
     tl.from(
         "header .container", {
-            y: 40,
-            opacity: 0,
-            delay: 0.3,
-        },
+        y: 40,
+        opacity: 0,
+        delay: 0.3,
+    },
         "-=1.5"
     );
 
 });
 
-$(function() {
+$(function () {
     var width = $(window).width();
     if (width < 991) {
 
         "use strict";
 
-        $(".navbar .navbar-nav").on("click", ".nav-link", function() {
+        $(".navbar .navbar-nav").on("click", ".nav-link", function () {
 
             $(".navbar .navbar-nav .dropdown .dropdown-menu").removeClass("show");
 
