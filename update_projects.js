@@ -55,12 +55,12 @@ if (itemsStartIdx !== -1 && itemsEndIdx !== -1) {
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="react-tab" data-bs-toggle="tab"
                                 data-bs-target="#react-tab-pane" type="button" role="tab" aria-controls="react-tab-pane"
-                                aria-selected="false">Frontend and Backend</button>
+                                aria-selected="false">Frontend Design</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                                 data-bs-target="#contact-tab-pane" type="button" role="tab"
-                                aria-controls="contact-tab-pane" aria-selected="false">Frontend & Backend Collaboration</button>
+                                aria-controls="contact-tab-pane" aria-selected="false">API Implementation</button>
                         </li>
                     </ul>
                 </div>
