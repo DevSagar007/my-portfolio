@@ -517,27 +517,6 @@ $(function () {
 
         };
 
-        // Responsive
-        if ($(this).hasClass('swiper5')) {
-            var conf = {
-
-                breakpoints: {
-                    0: {
-                        slidesPerView: 2,
-                    },
-                    640: {
-                        slidesPerView: 3,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                    },
-                }
-            };
-        };
-
         if ($(this).hasClass('swiper4')) {
             var conf = {
 
