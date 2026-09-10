@@ -1,0 +1,51 @@
+/* ---------------------------------------------------------------------------
+   Legacy theme stylesheets.
+
+   These are the original "Hawke" template stylesheets, vendored from
+   assets/css. They are the visual source of truth for the whole site, so they
+   are imported first and Tailwind's Preflight is left out (see below) to keep
+   the cascade identical to the static build. Only the relative url() paths
+   were rewritten to /assets/... so they resolve against public/assets.
+
+   The template also shipped ionicons, justifiedGallery, animate.css,
+   magnific-popup and YouTubePopUp; none of them are rendered by any page, so
+   they were dropped during the migration.
+--------------------------------------------------------------------------- */
+@import '../styles/legacy/plugins/bootstrap.min.css';
+@import '../styles/legacy/plugins/pe-icon-7-stroke.css';
+@import '../styles/legacy/plugins/fontawesome-pro.css';
+@import '../styles/legacy/plugins/swiper.min.css';
+@import '../styles/legacy/style.css';
+
+/* ---------------------------------------------------------------------------
+   Tailwind v4.
+
+   Two guards keep Tailwind from changing the template's design:
+     * Preflight is left out - only the `theme` and `utilities` layers are
+       imported - so Tailwind does not reset headings, lists, images or borders
+       out from under the theme.
+     * Every utility is namespaced with `prefix(tw)` (written `tw:sticky`),
+       because the theme ships its own utility classes whose names collide with
+       Tailwind's (`.container`, `.collapse`, `.static`, `.relative`, ...).
+       Without it Tailwind's versions win on cascade order and break the layout.
+--------------------------------------------------------------------------- */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw);
+
+/* ---------------------------------------------------------------------------
+   Migration-only override.
+
+   The static site pinned the profile card and the project sidebar with the
+   jQuery "sticky-kit" plugin, which used position: fixed. That is replaced by
+   native CSS stickiness (`tw:sticky tw:top-0`), but the theme's
+   `main { overflow: hidden }` makes <main> a scroll container, which would trap
+   any sticky descendant and stop it from pinning at all.
+
+   `overflow: clip` clips exactly the same way - same rounded corners, same
+   horizontal containment - without creating a scroll container. <main> already
+   has a border, so it also does not rely on `hidden` to stop margin collapsing.
+--------------------------------------------------------------------------- */
+main {
+  overflow: clip;
+}
