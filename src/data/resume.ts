@@ -192,35 +192,35 @@ export const skills: Skill[] = [
 export const services: Service[] = [
   {
     itemClass: 'item md-mb30',
-    letter: 'U',
-    title: 'UI Development',
-    description:
-      'Crafting elegant and user-focused interfaces with attention to detail and usability.',
-    tags: ['Figma', 'UI Design', 'UX Principles', 'Accessibility'],
-  },
-  {
-    itemClass: 'item md-mb30',
     letter: 'F',
     title: 'Frontend Development',
     description:
-      'Building responsive, pixel-perfect and high-performance websites using modern frontend technologies.',
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+      'Building responsive, high-performance interfaces with React, Next.js and TypeScript.',
+    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    itemClass: 'item md-mb30',
+    letter: 'B',
+    title: 'Backend & APIs',
+    description:
+      'Building secure REST APIs with Node.js and Express, with JWT auth, validation and error handling.',
+    tags: ['Node.js', 'Express.js', 'JWT', 'REST API'],
   },
   {
     itemClass: 'item sm-mb30',
-    letter: 'M',
-    title: 'Modern Web Applications',
+    letter: 'E',
+    title: 'End-to-End Web Apps',
     description:
-      'Building full-stack web apps with React, Next.js and Node.js APIs using clean architecture.',
-    tags: ['React', 'Next.js', 'Node.js', 'REST API'],
+      'Full-stack apps connecting React and Next.js frontends to Node.js APIs and databases.',
+    tags: ['MongoDB', 'PostgreSQL', 'CRUD', 'Deployment'],
   },
   {
     itemClass: 'item',
     letter: 'P',
     title: 'Performance Optimization',
     description:
-      'Improving website speed, Core Web Vitals, and overall user experience.',
-    tags: ['Core Web Vitals', 'SEO', 'Lazy Loading', 'Optimization'],
+      'Improving speed, Core Web Vitals, SEO and accessibility for a better user experience.',
+    tags: ['Core Web Vitals', 'SEO', 'Lazy Loading', 'Accessibility'],
   },
 ];
 
