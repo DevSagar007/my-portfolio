@@ -6,9 +6,9 @@ import Portfolio from '@/components/portfolio/Portfolio';
 import { relatedNews } from '@/data/blogs';
 
 export const metadata: Metadata = {
-  title: 'Projects - Sagor Hossen',
+  title: 'Projects | Md Sagor Hossen',
   description:
-    'Selected front-end projects by Md Sagor Hossen: HTML templates, React and Next.js interfaces, and API integration work.',
+    'Selected projects by Md Sagor Hossen, a Frontend-Focused Full-Stack Developer: React and Next.js applications, dashboards, REST API integration and responsive HTML templates.',
 };
 
 export default function ProjectsPage() {

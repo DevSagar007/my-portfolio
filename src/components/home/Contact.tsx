@@ -10,9 +10,9 @@ export default function Contact() {
           <div className="col-lg-5">
             <div className="sec-head md-mb80">
               <h6 className="dot-titl mb-15">Get In Touch</h6>
-              <h2 className="fz-50">Let&apos;s make your brand brilliant!</h2>
+              <h2 className="fz-50">Let&apos;s build something great together!</h2>
               <p className="fz-15 mt-10">
-                If you would like to work with us or just want to get in touch, we&rsquo;d love to
+                Have a role, project or idea in mind? I&rsquo;m open to new opportunities and would love to
                 hear from you!
               </p>
               <div className="phone fz-30 fw-600 mt-30 underline">

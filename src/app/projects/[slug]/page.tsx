@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   if (!project) return {};
 
   return {
-    title: `${project.title} - Sagor Hossen`,
+    title: `${project.title} | Md Sagor Hossen`,
     description: project.description,
     openGraph: {
-      title: `${project.title} - Sagor Hossen`,
+      title: `${project.title} | Md Sagor Hossen`,
       description: project.description,
       images: [project.image],
     },
@@ -147,7 +147,7 @@ export default async function ProjectDetailsPage({ params }: ProjectPageProps) {
                       <h6 className="sub-title">
                         {next ? (
                           <Link href={`/projects/${next.slug}`}>
-                            next Project <i className="fas fa-long-arrow-alt-right"></i>
+                            Next Project <i className="fas fa-long-arrow-alt-right"></i>
                           </Link>
                         ) : (
                           <Link href="/projects">

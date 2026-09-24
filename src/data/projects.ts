@@ -16,12 +16,12 @@ export const projects: Project[] = [
     imageAlt: 'Orvina Project',
     href: 'https://orvina.vercel.app/',
     description:
-      'Worked as a Frontend Developer and API Integrator. Built responsive user and admin interfaces using Next.js and Tailwind CSS, integrated Laravel REST APIs with Redux Toolkit Query, implemented authentication, dashboard features, investment management, wallet operations, and real-time data handling.',
-    technologies: ['Next.js', 'Tailwind CSS', 'Redux Query', 'Laravel API', 'JWT Auth'],
+      'A green energy investment and loan platform with separate user and admin portals. I developed the frontend application with Next.js and Tailwind CSS and integrated the REST APIs using Redux Toolkit Query, building JWT authentication, dashboard features, investment management, wallet operations and real-time data handling in a fully responsive UI.',
+    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'Laravel API', 'JWT Auth'],
     infoCard: {
       rows: [
         { label: 'Role:', value: 'Frontend Developer & API Integration' },
-        { label: 'Backend:', value: 'Laravel REST API (Laravel Developer)' },
+        { label: 'Backend:', value: 'REST API (built by backend developer)' },
       ],
       linkRowClass: 'row g-2 mb-15',
       links: [
@@ -66,7 +66,7 @@ export const projects: Project[] = [
       api: {
         rows: [
           { label: 'Role:', value: 'Frontend Developer & API Integration' },
-          { label: 'Backend:', value: 'Laravel REST API (Laravel Developer)' },
+          { label: 'Backend:', value: 'REST API (built by backend developer)' },
         ],
         linkRowClass: 'row mb-15',
         links: [
@@ -117,12 +117,12 @@ export const projects: Project[] = [
     imageAlt: 'Trustep Project',
     href: 'https://trustep.vercel.app/',
     description:
-      'Worked as a Frontend Developer and API Integrator. Developed modern, responsive user and admin interfaces using Next.js and Tailwind CSS. Integrated Laravel REST APIs with Redux Toolkit Query to manage company listings, business reviews, rating systems, authentication, user profiles, search functionality, and admin moderation features.',
-    technologies: ['Next.js', 'Tailwind CSS', 'Redux Query', 'Laravel API', 'Reviews'],
+      'A business review and rating platform for reviewers, business owners and admins. I developed the frontend application with Next.js and Tailwind CSS and integrated the REST APIs using Redux Toolkit Query to power company listings, reviews and ratings, authentication, user profiles, search, role-based dashboards and admin moderation.',
+    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'Laravel API', 'Firebase Auth'],
     infoCard: {
       rows: [
         { label: 'Role:', value: 'Frontend Developer & API Integration' },
-        { label: 'Backend:', value: 'Laravel REST API (Laravel Developer)' },
+        { label: 'Backend:', value: 'REST API (built by backend developer)' },
       ],
       linkRowClass: 'row mb-15',
       links: [
@@ -180,8 +180,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/eduman-education-online-courses-html-template/36636891?s_rank=67',
     description:
-      'Eduman – Education & Online Courses HTML Template Eduman Template is creative template for University, College, Courses Hub, Training Center, LMS, Academy, Web, School, Kindergarten, etc. We provide you with pre-built pages, but it’s also dead simple to create new pages all your own with ease.You can easily edit and customize the default homepage to make it in line with your specific content arrangement using the Bootstrap 5. has professional, pixel perfect and clean modern layouts for almost any website need.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Eduman is a responsive education and online course template for universities, colleges, academies, training centers and LMS platforms. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building reusable page sections, course listings and pixel-perfect layouts that are easy to customize and work smoothly across all devices and browsers.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 4,
@@ -193,8 +193,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://paradox-react.vercel.app/',
     description:
-      'Paradox – Creative Agency is a clean and modern HTML5 , Bootstrap Creative Agency Template. In artistic and creative industries, having a portfolio is pretty much a requirement. Digital Agencies, illustrators, graphic artists, designer, marketing services, developer and artisans all use portfolios as a key way of marketing themselves. So it a very important to have a awesome portfolio. In this situation Paradox is perfect solution. It’s suitable for Digital Agencies, Business consulting, Creative Agencies, IT Agenc, Startup Business, SEO Agencies, Personal Portfolio, any or any kind of portfolio profile',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Paradox is a clean, modern creative agency and portfolio template for digital agencies, startups, designers and consultants. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, focusing on reusable sections, smooth interactions and a fully responsive, cross-browser layout that showcases portfolio work effectively.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 5,
@@ -206,8 +206,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/finwise-online-banking-finance-html5-template/47765585',
     description:
-      'Paradox – Creative Agency is a clean and modern HTML5 , Bootstrap Creative Agency Template. In artistic and creative industries, having a portfolio is pretty much a requirement. Digital Agencies, illustrators, graphic artists, designer, marketing services, developer and artisans all use portfolios as a key way of marketing themselves. So it a very important to have a awesome portfolio. In this situation Paradox is perfect solution. It’s suitable for Digital Agencies, Business consulting, Creative Agencies, IT Agenc, Startup Business, SEO Agencies, Personal Portfolio, any or any kind of portfolio profile',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Finwise is an online banking and finance website template for banks, fintech startups and financial service providers. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building clear service and pricing sections, trustworthy layouts and a fully responsive UI optimized for performance across devices.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 6,
@@ -219,8 +219,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/banana-organic-food-html5-template/38683907?s_rank=48',
     description:
-      'Banana – HTML Template is creative template for Organic Food & Grocery eCommerce sites. banana is perfect for different category websites: Organic Store, Organic Food Shop, Gardening, Organic Farming, Organic Food, Plant Biotechnology, Eco Store, Groundskeeper, Ecology, Vegetables, Bakery Shop etc, and any more. You can create many unique and modern websites with Banana. The code is very easy to modify and make it suit anything you need.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Banana is an organic food and grocery eCommerce template for organic stores, farms, bakeries and eco shops. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building product listings, shop and cart pages and reusable components in a clean, fully responsive layout that is easy to customize.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 7,
@@ -232,8 +232,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/businoz-multipurpose-business-html5-template/38233795',
     description:
-      'Banana – HTML Template is creative template for Organic Food & Grocery eCommerce sites. banana is perfect for different category websites: Organic Store, Organic Food Shop, Gardening, Organic Farming, Organic Food, Plant Biotechnology, Eco Store, Groundskeeper, Ecology, Vegetables, Bakery Shop etc, and any more. You can create many unique and modern websites with Banana. The code is very easy to modify and make it suit anything you need.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Businoz is a multipurpose business website template for corporate companies, consultancies and service providers. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building reusable service, team and case-study sections in a professional, fully responsive layout with consistent cross-browser behavior.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 8,
@@ -245,8 +245,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/dairypress-dairy-farm-html5-template/39211137?s_rank=47',
     description:
-      'Dairypress – HTML Template is creative template for Dairy Farm & Eco Milk Products sites. Dairypress is perfect for different category websites: Organic Store, dairy farms, eco products manufacturers, meat and milk manufacturers, Corganic stores, cattle farms, agricultural business, milk production, milk shops etc, and any more. You can create many unique and modern websites with Dairypress. The code is very easy to modify and make it suit anything you need. We provide you with pre-built pages, but it’s also dead simple to create new pages all your own with eas',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Dairypress is a dairy farm and eco milk products template for dairy farms, organic stores, cattle farms and agricultural businesses. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building product showcases, farm service pages and reusable sections in a fully responsive, easy-to-customize layout.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 9,
@@ -258,8 +258,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/expovent-event-management-dashboard-html5-template-rtl/43288905?s_rank=29',
     description:
-      'Expovent – HTML Template is creative template for Event Management Service sites. Expovent is perfect for websites: event agency, event services, motivational speaker, celebration, event backend event task, event ui, fun meetings, merry-making etc. You can create many unique and modern websites with Expovent. The code is very easy to modify and make it suit anything you need.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Expovent is an event management dashboard template with RTL support for event agencies, organizers and service providers. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building dashboard layouts, event management screens and data-rich components that stay clean and usable on every screen size.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 10,
@@ -271,8 +271,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/eurtech-it-solutions-html5-template/39640570?s_rank=42',
     description:
-      'Eurtech – HTML5 Template is creative template for IT Solutions & Technology sites. Eurtech is perfect for different category websites: IT Solutions, IT Services, IT Business, Cyber security, Consulting, SaaS & Software, Digital Solution, Technical Engineering, Technology, and Services Company etc, and any more. You can create many unique and modern websites with Eurtech. The code is very easy to modify and make it suit anything you need. We provide you with pre-built pages, but it’s also dead simple to create new pages all your own with ease.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Eurtech is an IT solutions and technology company template for IT services, cyber security, SaaS, consulting and digital solution businesses. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building reusable service and pricing sections in a modern, fully responsive layout with cross-browser support.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 11,
@@ -284,8 +284,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://medivibes.vercel.app/',
     description:
-      'Paradox – Creative Agency is a clean and modern HTML5 , Bootstrap Creative Agency Template. In artistic and creative industries, having a portfolio is pretty much a requirement. Digital Agencies, illustrators, graphic artists, designer, marketing services, developer and artisans all use portfolios as a key way of marketing themselves. So it a very important to have a awesome portfolio. In this situation Paradox is perfect solution. It’s suitable for Digital Agencies, Business consulting, Creative Agencies, IT Agenc, Startup Business, SEO Agencies, Personal Portfolio, any or any kind of portfolio profile',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Medivibes is a health and medical website template for clinics, hospitals and healthcare providers. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building doctor, department and appointment sections in an accessible, fully responsive layout that presents medical services clearly on any device.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 12,
@@ -297,8 +297,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/axil-creative-agency-portfolio-template/45530784',
     description:
-      'Axil – Creative Agency Portfolio is a clean and modern HTML5 , Bootstrap Creative Agency Template. In artistic and creative industries, having a portfolio is pretty much a requirement. Digital Agencies, Startup Business, graphic artists, designer, marketing services, developer and artisans all use portfolios as a key way of marketing themselves. So it a very important to have a awesome portfolio. In this situation Axil is perfect solution. It’s suitable for Digital Agencies, Creative Business consulting, Creative Agencies, IT Agenc, Startup Business, SEO Agencies, Personal Portfolio, any or any kind of portfolio profile',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Axil is a creative agency portfolio template for digital agencies, startups, designers and marketing teams. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building portfolio grids, service sections and case-study pages in a clean, fully responsive layout with smooth, performant interactions.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 13,
@@ -310,8 +310,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/dogri-health-medical-center-html-template/49310177',
     description:
-      'Axil – Creative Agency Portfolio is a clean and modern HTML5 , Bootstrap Creative Agency Template. In artistic and creative industries, having a portfolio is pretty much a requirement. Digital Agencies, Startup Business, graphic artists, designer, marketing services, developer and artisans all use portfolios as a key way of marketing themselves. So it a very important to have a awesome portfolio. In this situation Axil is perfect solution. It’s suitable for Digital Agencies, Creative Business consulting, Creative Agencies, IT Agenc, Startup Business, SEO Agencies, Personal Portfolio, any or any kind of portfolio profile',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Dogri is a health and medical center website template for clinics, medical centers and healthcare professionals. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building service, doctor and appointment sections in a clean, fully responsive and cross-browser compatible layout.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 14,
@@ -323,21 +323,21 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://themeforest.net/item/digitek-seo-service-html-template/44350405',
     description:
-      'Digitek is a Responsive Modern Bootstrap 5 template for IT, SEO, Marketing, SaaS, Business & Social Media Marketing agency HTML Template. It is created for business and tech-focussed agencies who offer Online & IT-based services,, including digital solutions through SaaS applications. The template is suitable for Agencies, startups, IT Solutions providers, CCTV services, Psychology Counselling, NewsPortal, and other business agencies.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Digitek is a responsive Bootstrap 5 template for IT, SEO, SaaS and digital marketing agencies. I developed the frontend with HTML5, SCSS, Bootstrap 5 and JavaScript, building reusable service, pricing and case-study sections in a modern, fully responsive layout designed for tech-focused businesses.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 15,
     slug: 'inventual',
     title: 'Inventual',
     titleClass: 'line-height-1 fz-20 font-weight-600',
-    subtitle: 'Inventual NextJs Inventory Admin Template + RTL',
+    subtitle: 'Inventual Next.js Inventory Admin Template + RTL',
     image: '/assets/imgs/works/react-01.png',
     imageAlt: '',
     href: 'https://themeforest.net/item/inventual-angular-inventory-admin-template/35814136',
     description:
-      'Inventual is a sophisticated and powerful inventory administration template meticulously designed to meet the unique demands of managing inventories in diverse industries. With its cutting-edge features and intuitive user interface, Inventual empowers businesses to streamline inventory management, optimize processes, and enhance productivity',
-    technologies: ['Next Js', 'ReactJS', 'Tailwind Css', 'Material UI', 'Apex Charts', 'Fully Responsive'],
+      'Inventual is an inventory management admin dashboard for businesses that need to track products, stock, sales and purchases. I developed the frontend with Next.js, React.js, Tailwind CSS and Material UI, building dashboard layouts, reusable components, data tables and ApexCharts analytics views in a fully responsive UI with RTL support.',
+    technologies: ['Next.js', 'React.js', 'Tailwind CSS', 'Material UI', 'ApexCharts', 'Fully Responsive'],
   },
   {
     id: 16,
@@ -349,8 +349,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://codecanyon.net/item/solid-ptc-advanced-pay-per-click-platform/54996559',
     description:
-      'Solid PTC - Advanced Pay Per Click Platform - CodeCanyon Item for Sale Live Preview Screenshots SolidPTC – is a Pay Per Click solution that is mainly used for building a business website that can offer advertising campaigns, and sales and generate traffic on the websites. It is an easy and reliable PTC Script where all the necessary features are available. In the system, visitors can register as a user to earn money from the platform and, can deposit to the account for subscribing to the plan to see more ads and earn more. In the system, there are places to list the ads by the user which will be seen by all the other users. The admin or the user both will be able to list the ads and they can be found by all the users as per needs.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Solid PTC is a pay-per-click advertising platform where users register, subscribe to plans, view ads to earn and publish their own ad campaigns, while admins manage the whole system. I developed the responsive frontend UI with HTML5, SCSS, Bootstrap 5 and JavaScript, building the landing pages and user dashboard screens; the application backend was built by the backend team.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 17,
@@ -362,8 +362,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://codecanyon.net/item/hyiprio-advanced-hyip-investment-scheme-with-ranking-system/41665623',
     description:
-      'Hyip Rio – is an Advanced Investment System that is mainly used for the Hyip Investment Website. It is a highly secure and fast dynamic Hyip Investment Script. In the system user can register to the application and can deposit to the account and can Invest in any of the Investment Plans which is called Schema in the system. Users can get the Signup Bonus for registering to the website and they also can earn to referral. It has various referral levels to get the referral bonus. There is an integrated automatic payment gateway like Paypal, Stripe, Mollie, Coinbase, Paystack, VogurePay, Coingate, and Flutterwave. Also, it has an automatic withdrawal method to withdraw the money to the user account directly. It has a manual deposit method available. There is a Ranking system on the website, users can achieve any of the rankings to earn from investment and can unlock ranking badges. One user can transfer the fund to other users. There is an investment and deposit bounty available. All the systems and features are managed by the admin.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Hyip Rio is an advanced investment platform with investment plans, multi-level referral bonuses, a ranking system, multiple payment gateways, automatic withdrawals and fund transfers between users. I developed the responsive frontend UI with HTML5, SCSS, Bootstrap 5 and JavaScript, building the landing pages and user dashboard screens; the application backend was built by the backend team.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
   {
     id: 18,
@@ -375,8 +375,8 @@ export const projects: Project[] = [
     imageAlt: '',
     href: 'https://codecanyon.net/item/digibank-advanced-digital-banking-system-with-rewards/52757276',
     description:
-      'Digibank – is an Advanced Digital Banking solution that is mainly used for Digital and Physical Banking Websites. It is a flexible banking script that offers all banking facilities. In the system, visitors can register as a bank user to the application and deposit into the account, and also can make the FDR or DPS using the deposited amount. In the system, there are DPS, FDR, Loan and Bill payment, Multi Wallets or Currency, and Virtual card creation features available. The user can make a DPS for a particular time period and amount, and can receive the DPS amount with the profit after its maturity. It is also possible to make FDR, which had some FDR plans, the bank users would keep the funds in their FDR as block money, and they would receive the profit from that money every a little period of time. FDR has the compounding system available. The bank users can also apply for a Loan by following all the processes of the bank. The admin or bank owner will be able to approve the loan or reject it if it does not fulfill the requirements.',
-    technologies: ['HTML5 / CSS3', 'SASS CSS.', 'Bootstrap 5.x', 'JS framework', 'Fully Responsive'],
+      'Digibank is a multi-wallet digital banking system with DPS and FDR savings schemes, loans, bill payments, virtual cards and rewards. I developed the responsive frontend UI with HTML5, SCSS, Bootstrap 5 and JavaScript, building the landing pages and user banking dashboard screens; the application backend was built by the backend team.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'Fully Responsive'],
   },
 ];
 

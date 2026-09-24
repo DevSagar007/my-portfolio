@@ -81,7 +81,7 @@ export default function Navbar() {
         <div className="md-hide">
           <div className="butn-presv">
             <a href="#0" className="butn butn-sm butn-bg bg-white radius-5 skew">
-              <span className="text-dark">Lets Talk</span>
+              <span className="text-dark">Let&apos;s Talk</span>
             </a>
           </div>
         </div>

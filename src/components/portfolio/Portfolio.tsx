@@ -29,7 +29,7 @@ export default function Portfolio({ sectionClassName, scrollIndex }: PortfolioPr
     <section className={sectionClassName} data-scroll-index={scrollIndex}>
       <div className="container">
         <div className="sec-head bord-thin-bottom pb-20 mb-30 d-flex align-items-center justify-content-between">
-          <h4 className="sub-title fz-28">Protfolio</h4>
+          <h4 className="sub-title fz-28">Portfolio</h4>
           <ul className="nav nav-tabs portfolio-filter" id="myTab" role="tablist">
             {portfolioTabs.map((tab) => (
               <li className="nav-item" role="presentation" key={tab.id}>

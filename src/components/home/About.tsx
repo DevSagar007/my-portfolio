@@ -7,7 +7,7 @@ export default function About() {
         <h1>
           Hello, I&rsquo;m <span className="main-color">Md Sagor Hossen</span>
           <span className="bord">
-            Front-end Developer <i></i>
+            Frontend-Focused Full-Stack Developer <i></i>
           </span>
         </h1>
       </div>
@@ -17,7 +17,7 @@ export default function About() {
             <div className="d-flex align-items-center">
               <h2>4+</h2>
               <p>
-                Years <br /> of Experance
+                Years of <br /> Experience
               </p>
             </div>
           </div>
@@ -25,7 +25,7 @@ export default function About() {
             <div className="d-flex align-items-center">
               <h2>20+</h2>
               <p>
-                Project
+                Projects
                 <br /> Completed
               </p>
             </div>
@@ -37,23 +37,24 @@ export default function About() {
                 download
                 className="butn butn-md butn-bord radius-5 skew cv-download"
               >
-                <span>Download C.V</span>
+                <span>Download CV</span>
               </a>
             </div>
           </div>
         </div>
       </div>
       <div className="text mt-80">
-        <h6 className="sub-title mb-15">About Us</h6>
+        <h6 className="sub-title mb-15">About Me</h6>
         <p className="fz-18">
-          Hi, I&apos;m <strong>Md Sagor Hossen.</strong>, a passionate Frontend Developer. I
-          specialize in building modern, responsive, and user-friendly web applications using{' '}
+          I&apos;m <strong>Md Sagor Hossen</strong>, a Frontend-Focused Full-Stack Developer with 4+
+          years of experience building responsive, scalable and user-focused web applications. My
+          strongest expertise is in{' '}
           <strong>
-            HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, TypeScript, React.js, Next.js, Redux,
-            TanStack Query, REST APIs, Firebase and MongoDB
+            React.js, Next.js, TypeScript, Redux, TanStack Query and Tailwind CSS
           </strong>
-          . I enjoy creating clean UI/UX, writing maintainable code, and continuously learning new
-          technologies to build scalable and efficient web solutions.
+          , and I also build backend systems with Node.js, Express.js, REST APIs, JWT authentication,
+          MongoDB and PostgreSQL, from API integration to database operations, validation and
+          deployment.
         </p>
       </div>
     </div>
