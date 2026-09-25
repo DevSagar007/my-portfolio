@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 
 import LongArrow from '@/components/icons/LongArrow';
 import { testimonials } from '@/data/resume';
+import { assetPath } from '@/utils/assetPath';
 import { inlineList } from '@/utils/inline';
 
 /**
@@ -121,7 +122,7 @@ export default function Testimonials() {
                           </div>
                           <div className="ml-auto">
                             <div className="icon-img-40">
-                              <img src="/my-portfolio/assets/imgs/svg-assets/quote.png" alt="" />
+                              <img src={assetPath('/assets/imgs/svg-assets/quote.png')} alt="" />
                             </div>
                           </div>
                         </div>
@@ -138,3 +139,5 @@ export default function Testimonials() {
     </section>
   );
 }
+import { assetPath } from '@/utils/assetPath';
+

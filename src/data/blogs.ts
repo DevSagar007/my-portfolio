@@ -1,10 +1,11 @@
 import type { BlogCard, BlogPost } from '@/types/blog';
+import { assetPath } from '@/utils/assetPath';
 
 /** The three news cards shared by the home page and the works page. */
 const newsCards: Omit<BlogCard, 'titleTargetBlank'>[] = [
   {
     itemClass: 'item md-mb30',
-    image: '/my-portfolio/assets/imgs/blog/1.jpg',
+    image: assetPath('/assets/imgs/blog/1.jpg'),
     date: '6 , Aug 2025',
     title: 'Software Development-এ BFF (Backend for Frontend) কী?',
     href: 'https://www.linkedin.com/feed/update/urn:li:activity:7372698145538961408/',
@@ -12,7 +13,7 @@ const newsCards: Omit<BlogCard, 'titleTargetBlank'>[] = [
   },
   {
     itemClass: 'item md-mb30',
-    image: '/my-portfolio/assets/imgs/blog/2.jpg',
+    image: assetPath('/assets/imgs/blog/2.jpg'),
     date: '6 , May 2026',
     title: 'What is BFF (Backend for Frontend) in Software Development?.',
     href: 'https://www.linkedin.com/feed/update/urn:li:activity:7438634424050589697/',
@@ -20,7 +21,7 @@ const newsCards: Omit<BlogCard, 'titleTargetBlank'>[] = [
   },
   {
     itemClass: 'item md-mb30',
-    image: '/my-portfolio/assets/imgs/blog/1.jpg',
+    image: assetPath('/assets/imgs/blog/1.jpg'),
     date: '6 , Aug 2025',
     title: 'Software Development-এ BFF (Backend for Frontend) কী?',
     href: 'https://www.linkedin.com/feed/update/urn:li:activity:7372698145538961408/',
@@ -49,7 +50,7 @@ const POST_SLUG = 'network-of-wormholes-colonies-extraordinary-claims-require';
 const relatedPosts: BlogCard[] = [
   {
     itemClass: 'item md-mb30',
-    image: '/my-portfolio/assets/imgs/blog/1.jpg',
+    image: assetPath('/assets/imgs/blog/1.jpg'),
     date: '6 , Aug 2022',
     title: '12 unique examples of portfolio websites.',
     href: `/blog/${POST_SLUG}`,
@@ -58,7 +59,7 @@ const relatedPosts: BlogCard[] = [
   },
   {
     itemClass: 'item md-mb30',
-    image: '/my-portfolio/assets/imgs/blog/2.jpg',
+    image: assetPath('/assets/imgs/blog/2.jpg'),
     date: '6 , Aug 2022',
     title: 'Dealing with spring allergy symptoms.',
     href: `/blog/${POST_SLUG}`,
@@ -68,7 +69,7 @@ const relatedPosts: BlogCard[] = [
   {
     // The last card in the static markup drops the responsive bottom margin.
     itemClass: 'item',
-    image: '/my-portfolio/assets/imgs/blog/3.jpg',
+    image: assetPath('/assets/imgs/blog/3.jpg'),
     date: '6 , Aug 2022',
     title: 'Best wireframe tools for web designers.',
     href: `/blog/${POST_SLUG}`,
@@ -83,7 +84,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Network of wormholes colonies extraordinary claims require.',
     categories: ['Web Design', 'Envato'],
     meta: '6 , August 2022 - By Admin',
-    image: '/my-portfolio/assets/imgs/blog/m.jpg',
+    image: assetPath('/assets/imgs/blog/m.jpg'),
     blocks: [
       {
         type: 'text',
@@ -124,7 +125,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'imagePair',
         className: 'mb-50 mt-50',
-        images: ['/my-portfolio/assets/imgs/blog/b1.jpg', '/my-portfolio/assets/imgs/blog/b2.jpg'],
+        images: [assetPath('/assets/imgs/blog/b1.jpg'), assetPath('/assets/imgs/blog/b2.jpg')],
       },
       {
         type: 'title',
@@ -178,30 +179,30 @@ export const blogPosts: BlogPost[] = [
       { icon: 'fab fa-youtube', href: 'https://www.youtube.com/' },
     ],
     author: {
-      image: '/my-portfolio/assets/imgs/blog/author1.jpg',
+      image: assetPath('/assets/imgs/blog/author1.jpg'),
       name: 'Chris Smith',
       bio: 'Nulla eleifend, lectus eu gravida facilisis, ipsum metus faucibus eros, vitae vulputate nibh libero ac metus.',
     },
     prev: {
-      image: '/my-portfolio/assets/imgs/blog/1.jpg',
+      image: assetPath('/assets/imgs/blog/1.jpg'),
       slug: POST_SLUG,
       titleLines: ['Ways to quickly traffic to', 'your website.'],
     },
     next: {
-      image: '/my-portfolio/assets/imgs/blog/2.jpg',
+      image: assetPath('/assets/imgs/blog/2.jpg'),
       slug: POST_SLUG,
       titleLines: ['How to Handle Your Good Employee.'],
     },
     commentsHeading: 'comments (2)',
     comments: [
       {
-        avatar: '/my-portfolio/assets/imgs/blog/author1.jpg',
+        avatar: assetPath('/assets/imgs/blog/author1.jpg'),
         name: 'Megan fox',
         text: 'Ut elementum turpis lorem, id vulputate risus consequat vitae. Morbi eget urna imperdiet, pellentesque nulla id, tempus mauris.',
         replied: false,
       },
       {
-        avatar: '/my-portfolio/assets/imgs/blog/author1.jpg',
+        avatar: assetPath('/assets/imgs/blog/author1.jpg'),
         name: 'Megan fox',
         text: 'Ut elementum turpis lorem Morbi eget urna imperdiet, pellentesque nulla id, tempus mauris.',
         replied: true,
@@ -213,3 +214,5 @@ export const blogPosts: BlogPost[] = [
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
   blogPosts.find((post) => post.slug === slug);
+import { assetPath } from '@/utils/assetPath';
+

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Preloader from '@/components/Preloader';
 import ProgressWrap from '@/components/ProgressWrap';
+import { assetPath } from '@/utils/assetPath';
 
 import './globals.css';
 
@@ -14,7 +15,7 @@ const TITLE = 'Md Sagor Hossen | Frontend-Focused Full-Stack Developer';
 const DESCRIPTION =
   'Frontend-Focused Full-Stack Developer with 4+ years of experience specializing in React, Next.js and TypeScript, with full-stack expertise in Node.js, Express, REST APIs, JWT, MongoDB and PostgreSQL.';
 
-const PREVIEW_IMAGE = '/my-portfolio/assets/imgs/header/profile.png';
+const PREVIEW_IMAGE = assetPath('/assets/imgs/header/profile.png');
 
 export const metadata: Metadata = {
   // Base used to turn the relative Open Graph image paths into absolute URLs.
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   authors: [{ name: 'Md Sagor Hossen' }],
   icons: {
-    icon: '/my-portfolio/assets/imgs/favicon.svg',
-    shortcut: '/my-portfolio/assets/imgs/favicon.svg',
+    icon: assetPath('/assets/imgs/favicon.svg'),
+    shortcut: assetPath('/assets/imgs/favicon.svg'),
   },
   openGraph: {
     type: 'website',
@@ -75,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* The static page carried this as data-background and let a script
             turn it into an inline style; the image is declared directly here. */}
-        <div className="bg-img noise-bg tw:bg-[url('/my-portfolio/assets/imgs/patterns/noise1.png')]"></div>
+        <div className="bg-img noise-bg tw:bg-[url('/assets/imgs/patterns/noise1.png')]"></div>
 
         <Navbar />
 

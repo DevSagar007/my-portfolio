@@ -1,4 +1,5 @@
 import type { PortfolioTab, Project } from '@/types/project';
+import { assetPath } from '@/utils/assetPath';
 
 /**
  * Every project card from the original index.html / projects.html portfolio
@@ -12,7 +13,7 @@ export const projects: Project[] = [
     title: 'Orvina',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Sustainable Green Energy & Loan Platform',
-    image: '/my-portfolio/assets/imgs/works/orvina.png',
+    image: assetPath('/assets/imgs/works/orvina.png'),
     imageAlt: 'Orvina Project',
     href: 'https://orvina.vercel.app/',
     description:
@@ -113,7 +114,7 @@ export const projects: Project[] = [
     title: 'Trustep',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Review & Rating Platform',
-    image: '/my-portfolio/assets/imgs/works/trustep.png',
+    image: assetPath('/assets/imgs/works/trustep.png'),
     imageAlt: 'Trustep Project',
     href: 'https://trustep.vercel.app/',
     description:
@@ -176,7 +177,7 @@ export const projects: Project[] = [
     title: 'Eduman',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Eduman – Education & Online Courses HTML Template',
-    image: '/my-portfolio/assets/imgs/works/01.png',
+    image: assetPath('/assets/imgs/works/01.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/eduman-education-online-courses-html-template/36636891?s_rank=67',
     description:
@@ -189,7 +190,7 @@ export const projects: Project[] = [
     title: 'Paradox',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Paradox - Creative Agency HTML5 Template',
-    image: '/my-portfolio/assets/imgs/works/02.png',
+    image: assetPath('/assets/imgs/works/02.png'),
     imageAlt: '',
     href: 'https://paradox-react.vercel.app/',
     description:
@@ -202,7 +203,7 @@ export const projects: Project[] = [
     title: 'Finwise',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Finwise - Online Banking & Finance HTML5 Template',
-    image: '/my-portfolio/assets/imgs/works/03.png',
+    image: assetPath('/assets/imgs/works/03.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/finwise-online-banking-finance-html5-template/47765585',
     description:
@@ -215,7 +216,7 @@ export const projects: Project[] = [
     title: 'Banana',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Banana – Organic Food HTML5 Template',
-    image: '/my-portfolio/assets/imgs/works/05.png',
+    image: assetPath('/assets/imgs/works/05.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/banana-organic-food-html5-template/38683907?s_rank=48',
     description:
@@ -228,7 +229,7 @@ export const projects: Project[] = [
     title: 'Businoz',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Businoz - Multipurpose Business HTML5 Template',
-    image: '/my-portfolio/assets/imgs/works/16.png',
+    image: assetPath('/assets/imgs/works/16.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/businoz-multipurpose-business-html5-template/38233795',
     description:
@@ -241,7 +242,7 @@ export const projects: Project[] = [
     title: 'Dairy Farm',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Dairypress - Dairy Farm HTML5 Template',
-    image: '/my-portfolio/assets/imgs/works/06.png',
+    image: assetPath('/assets/imgs/works/06.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/dairypress-dairy-farm-html5-template/39211137?s_rank=47',
     description:
@@ -254,7 +255,7 @@ export const projects: Project[] = [
     title: 'Expovent Dashboard',
     titleClass: 'line-height-1',
     subtitle: 'Expovent - Event Management Dashboard HTML5 Template + RTL (With Dashboard)',
-    image: '/my-portfolio/assets/imgs/works/07.png',
+    image: assetPath('/assets/imgs/works/07.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/expovent-event-management-dashboard-html5-template-rtl/43288905?s_rank=29',
     description:
@@ -267,7 +268,7 @@ export const projects: Project[] = [
     title: 'Eurtech',
     titleClass: 'line-height-1',
     subtitle: 'Eurtech - IT Solutions HTML5 Template',
-    image: '/my-portfolio/assets/imgs/works/08.png',
+    image: assetPath('/assets/imgs/works/08.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/eurtech-it-solutions-html5-template/39640570?s_rank=42',
     description:
@@ -280,7 +281,7 @@ export const projects: Project[] = [
     title: 'Medivibes',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Medivibes - Health & Medical HTML5 Template',
-    image: '/my-portfolio/assets/imgs/works/medivibes.png',
+    image: assetPath('/assets/imgs/works/medivibes.png'),
     imageAlt: '',
     href: 'https://medivibes.vercel.app/',
     description:
@@ -293,7 +294,7 @@ export const projects: Project[] = [
     title: 'Axil',
     titleClass: 'line-height-1',
     subtitle: 'Axil - Creative Agency Portfolio Template',
-    image: '/my-portfolio/assets/imgs/works/09.png',
+    image: assetPath('/assets/imgs/works/09.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/axil-creative-agency-portfolio-template/45530784',
     description:
@@ -306,7 +307,7 @@ export const projects: Project[] = [
     title: 'Dogri',
     titleClass: 'line-height-1',
     subtitle: 'Health & Medical Service',
-    image: '/my-portfolio/assets/imgs/works/10.png',
+    image: assetPath('/assets/imgs/works/10.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/dogri-health-medical-center-html-template/49310177',
     description:
@@ -319,7 +320,7 @@ export const projects: Project[] = [
     title: 'Digitek',
     titleClass: 'line-height-1',
     subtitle: 'Digitek - IT Service HTML Template',
-    image: '/my-portfolio/assets/imgs/works/11.png',
+    image: assetPath('/assets/imgs/works/11.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/digitek-seo-service-html-template/44350405',
     description:
@@ -332,7 +333,7 @@ export const projects: Project[] = [
     title: 'Inventual',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Inventual Next.js Inventory Admin Template + RTL',
-    image: '/my-portfolio/assets/imgs/works/react-01.png',
+    image: assetPath('/assets/imgs/works/react-01.png'),
     imageAlt: '',
     href: 'https://themeforest.net/item/inventual-angular-inventory-admin-template/35814136',
     description:
@@ -345,7 +346,7 @@ export const projects: Project[] = [
     title: 'Solid PTC',
     titleClass: 'line-height-1',
     subtitle: 'Solid PTC - Advanced Pay Per Click Platform',
-    image: '/my-portfolio/assets/imgs/works/ptc.png',
+    image: assetPath('/assets/imgs/works/ptc.png'),
     imageAlt: '',
     href: 'https://codecanyon.net/item/solid-ptc-advanced-pay-per-click-platform/54996559',
     description:
@@ -358,7 +359,7 @@ export const projects: Project[] = [
     title: 'Hyip Rio',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Hyip Rio - Advanced Hyip Investment Scheme With Ranking System and Automatic Withdraw',
-    image: '/my-portfolio/assets/imgs/works/04.png',
+    image: assetPath('/assets/imgs/works/04.png'),
     imageAlt: '',
     href: 'https://codecanyon.net/item/hyiprio-advanced-hyip-investment-scheme-with-ranking-system/41665623',
     description:
@@ -371,7 +372,7 @@ export const projects: Project[] = [
     title: 'Digibank',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'Digibank - Advanced Multi Wallet Digital Banking System with Virtual Card and Rewards',
-    image: '/my-portfolio/assets/imgs/works/12.png',
+    image: assetPath('/assets/imgs/works/12.png'),
     imageAlt: '',
     href: 'https://codecanyon.net/item/digibank-advanced-digital-banking-system-with-rewards/52757276',
     description:
@@ -418,3 +419,5 @@ export const getProjectsForTab = (slugs: string[]): Project[] =>
   slugs
     .map((slug) => getProjectBySlug(slug))
     .filter((project): project is Project => Boolean(project));
+import { assetPath } from '@/utils/assetPath';
+

@@ -1,4 +1,5 @@
 import type { ResumeItem, Service, Skill, Testimonial } from '@/types/resume';
+import { assetPath } from '@/utils/assetPath';
 
 /** "Working Experience" list on the home page. */
 export const experience: ResumeItem[] = [
@@ -76,112 +77,112 @@ export const education: ResumeItem[] = [
 export const skills: Skill[] = [
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/s2.png',
+    icon: assetPath('/assets/imgs/resume/s2.png'),
     name: 'Convert UI / UX Designs',
     value: '100%',
     shown: '100%',
   },
   {
     itemClass: 'item mb30',
-    icon: '/my-portfolio/assets/imgs/resume/html.png',
+    icon: assetPath('/assets/imgs/resume/html.png'),
     name: 'HTML, CSS & Bootstrap',
     value: '85%',
     shown: '85%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/tailwindcss.svg',
+    icon: assetPath('/assets/imgs/resume/tailwindcss.svg'),
     name: 'Tailwind CSS',
     value: '90%',
     shown: '90%',
   },
   {
     itemClass: 'item',
-    icon: '/my-portfolio/assets/imgs/resume/scss-gulp.svg',
+    icon: assetPath('/assets/imgs/resume/scss-gulp.svg'),
     name: 'SCSS & Gulp.js',
     value: '90%',
     shown: '90%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/javascript.png',
+    icon: assetPath('/assets/imgs/resume/javascript.png'),
     name: 'JavaScript / ES6+',
     value: '64%',
     shown: '64%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/react.png',
+    icon: assetPath('/assets/imgs/resume/react.png'),
     name: 'React.js',
     value: '70%',
     shown: '70%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/next-js.png',
+    icon: assetPath('/assets/imgs/resume/next-js.png'),
     name: 'Next.js',
     value: '75%',
     shown: '75%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/axios.svg',
+    icon: assetPath('/assets/imgs/resume/axios.svg'),
     name: 'REST APIs & Integration',
     value: '90%',
     shown: '90%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/tanstackquery.svg',
+    icon: assetPath('/assets/imgs/resume/tanstackquery.svg'),
     name: 'TanStack Query',
     value: '85%',
     shown: '85%',
   },
   {
     itemClass: 'item',
-    icon: '/my-portfolio/assets/imgs/resume/postman.svg',
+    icon: assetPath('/assets/imgs/resume/postman.svg'),
     name: 'Postman',
     value: '85%',
     shown: '85%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/redux.svg',
+    icon: assetPath('/assets/imgs/resume/redux.svg'),
     name: 'Redux & Context API',
     value: '85%',
     shown: '85%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/typescript.svg',
+    icon: assetPath('/assets/imgs/resume/typescript.svg'),
     name: 'TypeScript',
     value: '80%',
     shown: '80%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/firebase.svg',
+    icon: assetPath('/assets/imgs/resume/firebase.svg'),
     name: 'Firebase & JWT Auth',
     value: '75%',
     shown: '75%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/node-js.png',
+    icon: assetPath('/assets/imgs/resume/node-js.png'),
     name: 'Node.js & Express.js',
     value: '50%',
     shown: '50%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/mongodb.png',
+    icon: assetPath('/assets/imgs/resume/mongodb.png'),
     name: 'MongoDB & PostgreSQL',
     value: '50%',
     shown: '50%',
   },
   {
     itemClass: 'item mb-30',
-    icon: '/my-portfolio/assets/imgs/resume/github.svg',
+    icon: assetPath('/assets/imgs/resume/github.svg'),
     name: 'Git, GitHub & Vercel',
     value: '90%',
     shown: '90%',
@@ -227,7 +228,7 @@ export const services: Service[] = [
 /** Slides of the testimonials carousel on the home page. */
 export const testimonials: Testimonial[] = [
   {
-    image: '/my-portfolio/assets/imgs/testim/1.jpg',
+    image: assetPath('/assets/imgs/testim/1.jpg'),
     name: 'Leonard Heiser',
     role: 'Envato customer',
     text:
@@ -236,7 +237,7 @@ export const testimonials: Testimonial[] = [
     reviews: '(71 Reviews)',
   },
   {
-    image: '/my-portfolio/assets/imgs/testim/2.jpg',
+    image: assetPath('/assets/imgs/testim/2.jpg'),
     name: 'Leonard Heiser',
     role: 'Envato customer',
     text:
@@ -245,7 +246,7 @@ export const testimonials: Testimonial[] = [
     reviews: '(71 Reviews)',
   },
   {
-    image: '/my-portfolio/assets/imgs/testim/3.jpg',
+    image: assetPath('/assets/imgs/testim/3.jpg'),
     name: 'Leonard Heiser',
     role: 'Envato customer',
     text:
@@ -254,7 +255,7 @@ export const testimonials: Testimonial[] = [
     reviews: '(71 Reviews)',
   },
   {
-    image: '/my-portfolio/assets/imgs/testim/4.jpg',
+    image: assetPath('/assets/imgs/testim/4.jpg'),
     name: 'Leonard Heiser',
     role: 'Envato customer',
     text:
@@ -263,3 +264,5 @@ export const testimonials: Testimonial[] = [
     reviews: '(71 Reviews)',
   },
 ];
+import { assetPath } from '@/utils/assetPath';
+

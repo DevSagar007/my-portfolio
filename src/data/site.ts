@@ -19,9 +19,9 @@ export const navItems: NavItem[] = [
 export const profile = {
   name: 'Sagor Hossen',
   handle: 'DevSagar',
-  image: '/my-portfolio/assets/imgs/header/profile.png',
-  logo: '/my-portfolio/assets/imgs/logo-light.png',
-  resume: '/my-portfolio/assets/pdf/Md-Sagor-Hossen_Resume.pdf',
+  image: assetPath('/assets/imgs/header/profile.png'),
+  logo: assetPath('/assets/imgs/logo-light.png'),
+  resume: assetPath('/assets/pdf/Md-Sagor-Hossen_Resume.pdf'),
 };
 
 export const profileSocials = [
@@ -37,3 +37,5 @@ export const contactSocials = [
   { label: 'X', href: 'https://x.com/sagorKhanomi', className: 'mr-30' },
   { label: 'Github', href: 'https://github.com/DevSagar007', className: '' },
 ];
+import { assetPath } from '@/utils/assetPath';
+
