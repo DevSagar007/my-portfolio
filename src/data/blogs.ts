@@ -214,5 +214,4 @@ export const blogPosts: BlogPost[] = [
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined =>
   blogPosts.find((post) => post.slug === slug);
-import { assetPath } from '@/utils/assetPath';
 

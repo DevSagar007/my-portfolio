@@ -264,5 +264,4 @@ export const testimonials: Testimonial[] = [
     reviews: '(71 Reviews)',
   },
 ];
-import { assetPath } from '@/utils/assetPath';
 

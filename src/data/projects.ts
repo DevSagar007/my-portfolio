@@ -419,5 +419,4 @@ export const getProjectsForTab = (slugs: string[]): Project[] =>
   slugs
     .map((slug) => getProjectBySlug(slug))
     .filter((project): project is Project => Boolean(project));
-import { assetPath } from '@/utils/assetPath';
 

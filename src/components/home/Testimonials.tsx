@@ -139,5 +139,4 @@ export default function Testimonials() {
     </section>
   );
 }
-import { assetPath } from '@/utils/assetPath';
 
