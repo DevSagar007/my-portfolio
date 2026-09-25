@@ -19,9 +19,9 @@ export const navItems: NavItem[] = [
 export const profile = {
   name: 'Sagor Hossen',
   handle: 'DevSagar',
-  image: '/assets/imgs/header/profile.png',
-  logo: '/assets/imgs/logo-light.png',
-  resume: '/assets/pdf/Md-Sagor-Hossen_Resume.pdf',
+  image: '/my-portfolio/assets/imgs/header/profile.png',
+  logo: '/my-portfolio/assets/imgs/logo-light.png',
+  resume: '/my-portfolio/assets/pdf/Md-Sagor-Hossen_Resume.pdf',
 };
 
 export const profileSocials = [

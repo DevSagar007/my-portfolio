@@ -5,7 +5,7 @@
    assets/css. They are the visual source of truth for the whole site, so they
    are imported first and Tailwind's Preflight is left out (see below) to keep
    the cascade identical to the static build. Only the relative url() paths
-   were rewritten to /assets/... so they resolve against public/assets.
+   were rewritten to /my-portfolio/assets/... so they resolve against public/assets.
 
    The template also shipped ionicons, justifiedGallery, animate.css,
    magnific-popup and YouTubePopUp; none of them are rendered by any page, so

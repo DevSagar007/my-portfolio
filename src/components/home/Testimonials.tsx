@@ -121,7 +121,7 @@ export default function Testimonials() {
                           </div>
                           <div className="ml-auto">
                             <div className="icon-img-40">
-                              <img src="/assets/imgs/svg-assets/quote.png" alt="" />
+                              <img src="/my-portfolio/assets/imgs/svg-assets/quote.png" alt="" />
                             </div>
                           </div>
                         </div>
