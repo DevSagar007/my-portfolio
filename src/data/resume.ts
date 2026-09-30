@@ -1,4 +1,4 @@
-import type { ResumeItem, Service, Skill, Testimonial } from '@/types/resume';
+import type { ResumeItem, Service, SkillStack, Testimonial } from '@/types/resume';
 import { assetPath } from '@/utils/assetPath';
 
 /** "Working Experience" list on the home page. */
@@ -73,119 +73,74 @@ export const education: ResumeItem[] = [
   },
 ];
 
-/** "Technical Skills & Expertise" grid on the home page. */
-export const skills: Skill[] = [
+/** Technology stacks shown in "Technical Skills & Expertise". */
+export const skillStacks: SkillStack[] = [
   {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/s2.png'),
-    name: 'Convert UI / UX Designs',
-    value: '100%',
-    shown: '100%',
+    title: 'Frontend Development',
+    icon: 'fa-solid fa-laptop-code',
+    description:
+      'Pixel-accurate, accessible interfaces with typed component architecture, predictable state and fast server-rendered pages.',
+    featured: true,
+    techs: [
+      { name: 'HTML5', icon: 'fa-brands fa-html5' },
+      { name: 'CSS3', icon: 'fa-brands fa-css3-alt' },
+      { name: 'JavaScript', icon: 'fa-brands fa-js' },
+      { name: 'TypeScript', icon: 'fa-solid fa-square-t' },
+      { name: 'React.js', icon: 'fa-brands fa-react' },
+      { name: 'Next.js', icon: 'fa-solid fa-n' },
+      { name: 'Tailwind CSS', icon: 'fa-solid fa-wind' },
+      { name: 'Bootstrap', icon: 'fa-brands fa-bootstrap' },
+      { name: 'Redux', icon: 'fa-solid fa-atom' },
+      { name: 'TanStack Query', icon: 'fa-solid fa-arrows-spin' },
+    ],
   },
   {
-    itemClass: 'item mb30',
-    icon: assetPath('/assets/imgs/resume/html.png'),
-    name: 'HTML, CSS & Bootstrap',
-    value: '85%',
-    shown: '85%',
+    title: 'Backend Development',
+    icon: 'fa-solid fa-server',
+    description: 'Secure REST APIs and server logic that keep data flowing reliably between clients and services.',
+    techs: [
+      { name: 'Node.js', icon: 'fa-brands fa-node-js' },
+      { name: 'Express.js', icon: 'fa-solid fa-brackets-curly' },
+      { name: 'REST API', icon: 'fa-solid fa-plug' },
+      { name: 'JWT Auth', icon: 'fa-solid fa-key' },
+      { name: 'API Integration', icon: 'fa-solid fa-link' },
+      { name: 'Server-side Development', icon: 'fa-solid fa-microchip' },
+    ],
   },
   {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/tailwindcss.svg'),
-    name: 'Tailwind CSS',
-    value: '90%',
-    shown: '90%',
+    title: 'Database & Cloud',
+    icon: 'fa-solid fa-database',
+    description: 'Well-modelled data, from document stores to relational schemas, deployed and scaled in the cloud.',
+    techs: [
+      { name: 'MongoDB', icon: 'fa-solid fa-leaf' },
+      { name: 'PostgreSQL', icon: 'fa-solid fa-database' },
+      { name: 'Firebase', icon: 'fa-solid fa-fire' },
+      { name: 'Database Design', icon: 'fa-solid fa-diagram-project' },
+      { name: 'Cloud Deployment', icon: 'fa-solid fa-cloud-arrow-up' },
+    ],
   },
   {
-    itemClass: 'item',
-    icon: assetPath('/assets/imgs/resume/scss-gulp.svg'),
-    name: 'SCSS & Gulp.js',
-    value: '90%',
-    shown: '90%',
+    title: 'Mobile Development',
+    icon: 'fa-solid fa-mobile-screen-button',
+    description: 'One React codebase shipped as native-feeling apps for both iOS and Android.',
+    techs: [
+      { name: 'React Native', icon: 'fa-brands fa-react' },
+      { name: 'Cross-platform Apps', icon: 'fa-solid fa-mobile-screen' },
+    ],
   },
   {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/javascript.png'),
-    name: 'JavaScript / ES6+',
-    value: '64%',
-    shown: '64%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/react.png'),
-    name: 'React.js',
-    value: '70%',
-    shown: '70%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/next-js.png'),
-    name: 'Next.js',
-    value: '75%',
-    shown: '75%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/axios.svg'),
-    name: 'REST APIs & Integration',
-    value: '90%',
-    shown: '90%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/tanstackquery.svg'),
-    name: 'TanStack Query',
-    value: '85%',
-    shown: '85%',
-  },
-  {
-    itemClass: 'item',
-    icon: assetPath('/assets/imgs/resume/postman.svg'),
-    name: 'Postman',
-    value: '85%',
-    shown: '85%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/redux.svg'),
-    name: 'Redux & Context API',
-    value: '85%',
-    shown: '85%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/typescript.svg'),
-    name: 'TypeScript',
-    value: '80%',
-    shown: '80%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/firebase.svg'),
-    name: 'Firebase & JWT Auth',
-    value: '75%',
-    shown: '75%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/node-js.png'),
-    name: 'Node.js & Express.js',
-    value: '50%',
-    shown: '50%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/mongodb.png'),
-    name: 'MongoDB & PostgreSQL',
-    value: '50%',
-    shown: '50%',
-  },
-  {
-    itemClass: 'item mb-30',
-    icon: assetPath('/assets/imgs/resume/github.svg'),
-    name: 'Git, GitHub & Vercel',
-    value: '90%',
-    shown: '90%',
+    title: 'Tools & Workflow',
+    icon: 'fa-solid fa-screwdriver-wrench',
+    description: 'A disciplined workflow from design hand-off to version control, testing and automated delivery.',
+    techs: [
+      { name: 'Git', icon: 'fa-brands fa-git-alt' },
+      { name: 'GitHub', icon: 'fa-brands fa-github' },
+      { name: 'VS Code', icon: 'fa-solid fa-code' },
+      { name: 'Figma', icon: 'fa-brands fa-figma' },
+      { name: 'Postman', icon: 'fa-solid fa-paper-plane' },
+      { name: 'Vercel', icon: 'fa-solid fa-triangle' },
+      { name: 'CI/CD', icon: 'fa-solid fa-infinity' },
+    ],
   },
 ];
 

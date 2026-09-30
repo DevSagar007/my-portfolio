@@ -1,0 +1,156 @@
+/* Technical Skills & Expertise
+   Stack cards built on the theme's tokens: #1d1d1d surface, thin white
+   borders, --maincolor accent, Sora type and Space Grotesk numerals.
+-----------------------------------------------------------------*/
+
+.skills .skills-intro {
+    max-width: 560px;
+    color: #bbb;
+}
+
+.skills .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.skills .stack-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Soft brand-coloured glow from the top corner, revealed on hover. */
+.skills .stack-card:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle at 100% 0, rgba(85, 230, 165, 0.12), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.skills .stack-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(85, 230, 165, 0.35);
+    box-shadow: 0 18px 40px -20px rgba(85, 230, 165, 0.25);
+}
+
+.skills .stack-card:hover:before {
+    opacity: 1;
+}
+
+.skills .stack-card.featured {
+    grid-column: 1 / -1;
+}
+
+.skills .stack-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.skills .stack-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #333333;
+    color: var(--maincolor);
+    font-size: 20px;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.skills .stack-card:hover .stack-icon {
+    background: var(--maincolor);
+    color: #1d1d1d;
+}
+
+.skills .stack-num {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.skills .stack-title {
+    margin-bottom: 10px;
+}
+
+.skills .stack-desc {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 22px;
+}
+
+.skills .stack-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.skills .stack-techs li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.skills .stack-techs li i {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.3s ease;
+}
+
+.skills .stack-techs li:hover {
+    transform: translateY(-2px);
+    border-color: var(--maincolor);
+    background: rgba(85, 230, 165, 0.08);
+    color: var(--maincolor);
+}
+
+.skills .stack-techs li:hover i {
+    color: var(--maincolor);
+}
+
+@media screen and (max-width: 767px) {
+    .skills .stack-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skills .stack-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills .stack-card,
+    .skills .stack-techs li {
+        transition: none;
+    }
+
+    .skills .stack-card:hover,
+    .skills .stack-techs li:hover {
+        transform: none;
+    }
+}

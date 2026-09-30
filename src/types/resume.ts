@@ -10,16 +10,22 @@ export interface ResumeItem {
   last: boolean;
 }
 
-/** A row in the "Technical Skills & Expertise" grid. */
-export interface Skill {
-  /** Item classes from the original markup (margins differ per cell). */
-  itemClass: string;
-  icon: string;
+/** A technology chip inside a skill stack card. */
+export interface SkillTech {
   name: string;
-  /** Target width of the progress bar, e.g. "85%". */
-  value: string;
-  /** Label rendered next to the bar. */
-  shown: string;
+  /** Font Awesome classes, e.g. "fa-brands fa-react". */
+  icon: string;
+}
+
+/** A card in the "Technical Skills & Expertise" grid. */
+export interface SkillStack {
+  title: string;
+  /** Font Awesome classes for the card's header icon. */
+  icon: string;
+  description: string;
+  techs: SkillTech[];
+  /** Featured stacks span the full width of the grid. */
+  featured?: boolean;
 }
 
 /** A card in the "Services" grid. */
