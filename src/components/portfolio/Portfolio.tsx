@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import ProjectCard from '@/components/portfolio/ProjectCard';
@@ -25,21 +26,42 @@ interface PortfolioProps {
  * shipping Bootstrap's bundle.
  */
 export default function Portfolio({ sectionClassName, scrollIndex, fullCatalog = false }: PortfolioProps) {
+  const router = useRouter();
   const [active, setActive] = useState<PortfolioTabId>('all');
+  const [isNavigating, setIsNavigating] = useState(false);
+
+  useEffect(() => () => document.body.classList.remove('page-transitioning'), []);
 
   useEffect(() => {
     if (!fullCatalog) return;
 
     const requestedTab = new URLSearchParams(window.location.search).get('tab');
-    if (portfolioTabs.some((tab) => tab.id === requestedTab)) {
-      const frame = window.requestAnimationFrame(() => setActive(requestedTab as PortfolioTabId));
-      return () => window.cancelAnimationFrame(frame);
-    }
+    const frame = window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+      if (portfolioTabs.some((tab) => tab.id === requestedTab)) {
+        setActive(requestedTab as PortfolioTabId);
+      }
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, [fullCatalog]);
 
   const projectsForTab = (tab: (typeof portfolioTabs)[number]) => {
     const matches = tab.id === 'all' && fullCatalog ? projects : getProjectsForTab(tab.slugs);
     return fullCatalog ? matches : matches.slice(0, 4);
+  };
+
+  const openProjects = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    if (isNavigating) return;
+
+    setIsNavigating(true);
+    document.body.classList.add('page-transitioning');
+
+    window.setTimeout(() => {
+      router.push(`/projects?tab=${active}`, { scroll: true });
+    }, 450);
   };
 
   return (
@@ -90,8 +112,20 @@ export default function Portfolio({ sectionClassName, scrollIndex, fullCatalog =
         {!fullCatalog ? <div className="row">
           <div className="col-xxl-12">
             <div className="butn-presv text-center mt-60">
-              <Link href={`/projects?tab=${active}`} className="butn butn-md butn-bg bg-white radius-5 skew">
-                <span className="text-dark fw-600">View More {portfolioTabs.find((tab) => tab.id === active)?.label} Projects</span>
+              <Link
+                href={`/projects?tab=${active}`}
+                scroll
+                className={`butn butn-md butn-bg bg-white radius-5 skew portfolio-more${isNavigating ? ' is-loading' : ''}`}
+                aria-busy={isNavigating}
+                onClick={openProjects}
+              >
+                <span className="text-dark fw-600">
+                  {isNavigating ? (
+                    <><span className="portfolio-loader" aria-hidden="true" /> Loading Projects...</>
+                  ) : (
+                    <>View More {portfolioTabs.find((tab) => tab.id === active)?.label} Projects</>
+                  )}
+                </span>
               </Link>
             </div>
           </div>

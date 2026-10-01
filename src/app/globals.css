@@ -49,4 +49,36 @@
 --------------------------------------------------------------------------- */
 main {
   overflow: clip;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.page-transitioning main {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+.portfolio-more.is-loading {
+  pointer-events: none;
+}
+
+.portfolio-loader {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  border: 2px solid rgba(29, 29, 29, 0.25);
+  border-top-color: #1d1d1d;
+  border-radius: 50%;
+  vertical-align: -2px;
+  animation: portfolio-loader-spin 0.65s linear infinite;
+}
+
+@keyframes portfolio-loader-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main { transition: none; }
+  .portfolio-loader { animation-duration: 1.2s; }
 }
