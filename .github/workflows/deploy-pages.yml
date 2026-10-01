@@ -32,7 +32,9 @@ jobs:
 
       - name: Build static site
         env:
-          NEXT_PUBLIC_BASE_PATH: /my-portfolio
+          # User sites (OWNER.github.io) are served at /; project sites keep
+          # the repository path so both deployment targets work.
+          NEXT_PUBLIC_BASE_PATH: ${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && '' || format('/{0}', github.event.repository.name) }}
         run: npm run build
 
       - name: Upload Pages artifact
@@ -49,4 +51,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
+        with:
+          # GitHub Pages can take several minutes to finish updating after a
+          # repository rename or a Pages source change.
+          timeout: 1200
