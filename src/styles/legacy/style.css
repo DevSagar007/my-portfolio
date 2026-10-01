@@ -2402,6 +2402,26 @@ body.loaded {
     border-color: var(--maincolor) !important;
 }
 
+.portfolio-filter .portfolio-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    margin-left: 8px;
+    padding: 0 6px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    color: inherit;
+    font-size: 10px;
+    line-height: 1;
+}
+
+.portfolio-filter .nav-link.active .portfolio-count {
+    background: var(--maincolor);
+    color: #1d1d1d;
+}
+
 @media screen and (max-width: 767px) {
     .portfolio .sec-head {
         flex-direction: column;

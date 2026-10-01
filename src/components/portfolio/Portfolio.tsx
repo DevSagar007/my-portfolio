@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import ProjectCard from '@/components/portfolio/ProjectCard';
-import { getProjectsForTab, portfolioTabs } from '@/data/projects';
+import { getProjectsForTab, portfolioTabs, projects } from '@/data/projects';
 import type { PortfolioTabId } from '@/types/project';
 
 interface PortfolioProps {
@@ -12,6 +12,8 @@ interface PortfolioProps {
   sectionClassName: string;
   /** Only the home page's copy took part in the one-page scroll navigation. */
   scrollIndex?: string;
+  /** Show the complete catalog and hide the home-page "See More" action. */
+  fullCatalog?: boolean;
 }
 
 /**
@@ -22,8 +24,23 @@ interface PortfolioProps {
  * the markup, the fade transition and the ARIA wiring stay identical without
  * shipping Bootstrap's bundle.
  */
-export default function Portfolio({ sectionClassName, scrollIndex }: PortfolioProps) {
+export default function Portfolio({ sectionClassName, scrollIndex, fullCatalog = false }: PortfolioProps) {
   const [active, setActive] = useState<PortfolioTabId>('all');
+
+  useEffect(() => {
+    if (!fullCatalog) return;
+
+    const requestedTab = new URLSearchParams(window.location.search).get('tab');
+    if (portfolioTabs.some((tab) => tab.id === requestedTab)) {
+      const frame = window.requestAnimationFrame(() => setActive(requestedTab as PortfolioTabId));
+      return () => window.cancelAnimationFrame(frame);
+    }
+  }, [fullCatalog]);
+
+  const projectsForTab = (tab: (typeof portfolioTabs)[number]) => {
+    const matches = tab.id === 'all' && fullCatalog ? projects : getProjectsForTab(tab.slugs);
+    return fullCatalog ? matches : matches.slice(0, 4);
+  };
 
   return (
     <section className={sectionClassName} data-scroll-index={scrollIndex}>
@@ -44,6 +61,7 @@ export default function Portfolio({ sectionClassName, scrollIndex }: PortfolioPr
                   onClick={() => setActive(tab.id)}
                 >
                   {tab.label}
+                  {fullCatalog ? <span className="portfolio-count">{projectsForTab(tab).length}</span> : null}
                 </button>
               </li>
             ))}
@@ -61,7 +79,7 @@ export default function Portfolio({ sectionClassName, scrollIndex }: PortfolioPr
               key={tab.id}
             >
               <div className="row">
-                {getProjectsForTab(tab.slugs).map((project) => (
+                {projectsForTab(tab).map((project) => (
                   <ProjectCard project={project} tabId={tab.id} key={project.slug} />
                 ))}
               </div>
@@ -69,15 +87,15 @@ export default function Portfolio({ sectionClassName, scrollIndex }: PortfolioPr
           ))}
         </div>
 
-        <div className="row">
+        {!fullCatalog ? <div className="row">
           <div className="col-xxl-12">
             <div className="butn-presv text-center mt-60">
-              <Link href="/projects" className="butn butn-md butn-bg bg-white radius-5 skew">
-                <span className="text-dark fw-600">See More Works</span>
+              <Link href={`/projects?tab=${active}`} className="butn butn-md butn-bg bg-white radius-5 skew">
+                <span className="text-dark fw-600">View More {portfolioTabs.find((tab) => tab.id === active)?.label} Projects</span>
               </Link>
             </div>
           </div>
-        </div>
+        </div> : null}
       </div>
     </section>
   );

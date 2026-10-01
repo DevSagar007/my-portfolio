@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       <BodyClass name="main-bg" />
 
       <main>
-        <Portfolio sectionClassName="portfolio section-padding" />
+        <Portfolio sectionClassName="portfolio section-padding" fullCatalog />
 
         <BlogSection
           sectionClassName="blog section-padding pt-0"
