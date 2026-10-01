@@ -76,7 +76,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* The static page carried this as data-background and let a script
             turn it into an inline style; the image is declared directly here. */}
-        <div className="bg-img noise-bg tw:bg-[url('/assets/imgs/patterns/noise1.png')]"></div>
+        <div
+          className="bg-img noise-bg"
+          style={{ backgroundImage: `url(${assetPath('/assets/imgs/patterns/noise1.png')})` }}
+        ></div>
 
         <Navbar />
 
