@@ -7,7 +7,7 @@ export default function About() {
         <h1>
           Hello, I&rsquo;m <span className="main-color">Md Sagor Hossen</span>
           <span className="bord">
-            Frontend-Focused Full-Stack Developer <i></i>
+            Frontend-Focused Full-Stack Engineer <i></i>
           </span>
         </h1>
       </div>
@@ -46,7 +46,7 @@ export default function About() {
       <div className="text mt-80">
         <h6 className="sub-title mb-15">About Me</h6>
         <p className="fz-18">
-          I&apos;m <strong>Md Sagor Hossen</strong>, a Frontend-Focused Full-Stack Developer with 4+
+          I&apos;m <strong>Md Sagor Hossen</strong>, a Frontend-Focused Full-Stack Engineer with 4+
           years of experience building responsive, scalable and user-focused web applications. My
           strongest expertise is in{' '}
           <strong>

@@ -10,10 +10,10 @@ import { assetPath } from '@/utils/assetPath';
 import './globals.css';
 
 /** Page title used for the tab, Open Graph and Twitter cards. */
-const TITLE = 'Md Sagor Hossen | Frontend-Focused Full-Stack Developer';
+const TITLE = 'Md Sagor Hossen | Frontend-Focused Full-Stack Engineer';
 
 const DESCRIPTION =
-  'Frontend-Focused Full-Stack Developer with 4+ years of experience specializing in React, Next.js and TypeScript, with full-stack expertise in Node.js, Express, REST APIs, JWT, MongoDB and PostgreSQL.';
+  'Frontend-Focused Full-Stack Engineer with 4+ years of experience specializing in React, Next.js and TypeScript, with full-stack expertise in Node.js, Express, REST APIs, JWT, MongoDB and PostgreSQL.';
 
 const PREVIEW_IMAGE = assetPath('/assets/imgs/header/profile.png');
 

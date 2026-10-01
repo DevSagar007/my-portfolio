@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { skillStacks } from '@/data/resume';
 
 /**
@@ -18,10 +19,14 @@ export default function Skills() {
       </p>
       <div className="stack-grid">
         {skillStacks.map((stack, index) => (
-          <article className={`stack-card${stack.featured ? ' featured' : ''}`} key={stack.title}>
+          <article
+            className={`stack-card${stack.featured ? ' featured' : ''}`}
+            key={stack.title}
+            style={stack.color ? ({ '--brand': stack.color } as CSSProperties) : undefined}
+          >
             <div className="stack-head">
               <span className="stack-icon">
-                <i className={stack.icon} aria-hidden="true"></i>
+                <stack.icon aria-hidden="true" />
               </span>
               <span className="stack-num num-font">{String(index + 1).padStart(2, '0')}</span>
             </div>
@@ -29,8 +34,12 @@ export default function Skills() {
             <p className="stack-desc">{stack.description}</p>
             <ul className="stack-techs">
               {stack.techs.map((tech) => (
-                <li key={tech.name}>
-                  <i className={tech.icon} aria-hidden="true"></i>
+                <li
+                  key={tech.name}
+                  className={tech.color ? 'brand' : undefined}
+                  style={tech.color ? ({ '--brand': tech.color } as CSSProperties) : undefined}
+                >
+                  <tech.icon className="tech-icon" aria-hidden="true" focusable="false" />
                   {tech.name}
                 </li>
               ))}

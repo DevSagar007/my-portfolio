@@ -8,7 +8,7 @@ import { relatedNews } from '@/data/blogs';
 export const metadata: Metadata = {
   title: 'Projects | Md Sagor Hossen',
   description:
-    'Selected projects by Md Sagor Hossen, a Frontend-Focused Full-Stack Developer: React and Next.js applications, dashboards, REST API integration and responsive HTML templates.',
+    'Selected projects by Md Sagor Hossen, a Frontend-Focused Full-Stack Engineer: React and Next.js applications, dashboards, REST API integration and responsive HTML templates.',
 };
 
 export default function ProjectsPage() {

@@ -1,3 +1,5 @@
+import type { IconType } from 'react-icons';
+
 /** A row in the "Working Experience" / "Education & Certifications" lists. */
 export interface ResumeItem {
   /** Spacing class the original markup used on the date column. */
@@ -13,15 +15,19 @@ export interface ResumeItem {
 /** A technology chip inside a skill stack card. */
 export interface SkillTech {
   name: string;
-  /** Font Awesome classes, e.g. "fa-brands fa-react". */
-  icon: string;
+  /** Brand logo (Simple Icons) or, for non-brand concepts, a line icon. */
+  icon: IconType;
+  /** Always-visible brand or concept icon colour. */
+  color?: string;
 }
 
 /** A card in the "Technical Skills & Expertise" grid. */
 export interface SkillStack {
   title: string;
-  /** Font Awesome classes for the card's header icon. */
-  icon: string;
+  /** Line icon for the card's header. */
+  icon: IconType;
+  /** Colour for the category icon and non-brand skill icons. */
+  color?: string;
   description: string;
   techs: SkillTech[];
   /** Featured stacks span the full width of the grid. */

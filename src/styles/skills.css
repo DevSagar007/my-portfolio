@@ -22,8 +22,6 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
     overflow: hidden;
     isolation: isolate;
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
@@ -41,9 +39,8 @@
 }
 
 .skills .stack-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     border-color: rgba(85, 230, 165, 0.35);
-    box-shadow: 0 18px 40px -20px rgba(85, 230, 165, 0.25);
 }
 
 .skills .stack-card:hover:before {
@@ -69,14 +66,13 @@
     justify-content: center;
     border-radius: 50%;
     background: #333333;
-    color: var(--maincolor);
-    font-size: 20px;
+    color: var(--brand, var(--maincolor));
+    font-size: 22px;
     transition: background 0.4s ease, color 0.4s ease;
 }
 
 .skills .stack-card:hover .stack-icon {
-    background: var(--maincolor);
-    color: #1d1d1d;
+    background: #3b3b3b;
 }
 
 .skills .stack-num {
@@ -106,30 +102,43 @@
 .skills .stack-techs li {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
+    gap: 10px;
+    padding: 7px 14px 7px 12px;
     font-size: 12px;
+    line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.02);
-    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
-.skills .stack-techs li i {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.55);
-    transition: color 0.3s ease;
+.skills .stack-techs li .tech-icon {
+    flex: none;
+    width: 17px;
+    height: 17px;
+    color: var(--brand, var(--maincolor));
+    transition: color 0.18s ease, opacity 0.18s ease;
+}
+
+/* Keep brand colours fully visible at rest and on hover. */
+.skills .stack-techs li.brand .tech-icon {
+    color: var(--brand);
+    opacity: 1;
 }
 
 .skills .stack-techs li:hover {
-    transform: translateY(-2px);
-    border-color: var(--maincolor);
-    background: rgba(85, 230, 165, 0.08);
-    color: var(--maincolor);
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.05);
 }
 
-.skills .stack-techs li:hover i {
-    color: var(--maincolor);
+.skills .stack-techs li:hover .tech-icon {
+    color: var(--brand, var(--maincolor));
+}
+
+.skills .stack-techs li.brand:hover .tech-icon {
+    color: var(--brand);
+    opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
