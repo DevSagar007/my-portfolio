@@ -13,10 +13,6 @@ export default function Skills() {
       <div className="sec-head bord-thin-bottom pb-20 mb-40">
         <h4 className="sub-title fz-28">Technical Skills &amp; Expertise</h4>
       </div>
-      <p className="skills-intro fz-16 mb-50">
-        Building scalable, modern web applications using a powerful combination of frontend,
-        backend, databases, and development tools.
-      </p>
       <div className="stack-grid">
         {skillStacks.map((stack, index) => (
           <article

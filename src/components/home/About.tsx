@@ -47,13 +47,14 @@ export default function About() {
         <h6 className="sub-title mb-15">About Me</h6>
         <p className="fz-18">
           I&apos;m <strong>Md Sagor Hossen</strong>, a Frontend-Focused Full-Stack Engineer with 4+
-          years of experience building responsive, scalable and user-focused web applications. My
+          years of experience building responsive, scalable, and user-focused web applications. My
           strongest expertise is in{' '}
           <strong>
-            React.js, Next.js, TypeScript, Redux, TanStack Query and Tailwind CSS
+            React.js, Next.js, TypeScript, Redux, TanStack Query, and Tailwind CSS
           </strong>
-          , and I also build backend systems with Node.js, Express.js, REST APIs, JWT authentication,
-          MongoDB and PostgreSQL, from API integration to database operations, validation and
+          , with experience in React Native for mobile application development. I also build backend
+          systems with Node.js, Express.js, REST APIs, JWT authentication, MongoDB, and PostgreSQL,
+          covering everything from API integration and database operations to validation and
           deployment.
         </p>
       </div>

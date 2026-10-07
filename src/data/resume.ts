@@ -1,11 +1,11 @@
 import {
-  SiBootstrap, SiCoolify, SiCss, SiDocker, SiExpress, SiFirebase, SiGit, SiGithub, SiHtml5,
+  SiAngular, SiBootstrap, SiCss, SiDocker, SiExpress, SiFirebase, SiGit, SiGithub, SiHtml5,
   SiJavascript, SiJsonwebtokens, SiMongodb, SiNestjs, SiNextdotjs, SiNodedotjs, SiPostgresql,
-  SiReact, SiReactquery, SiRedis, SiRedux, SiTailwindcss, SiTypescript, SiVercel,
+  SiReact, SiReactquery, SiRedis, SiRedux, SiTailwindcss, SiTypescript, SiVercel, SiVuedotjs,
 } from 'react-icons/si';
 import {
-  LuBlocks, LuBot, LuCloudUpload, LuCog, LuCpu, LuDatabase, LuGitBranch, LuLaptop, LuNetwork,
-  LuServer, LuSparkles, LuWaypoints, LuWebhook, LuWorkflow,
+  LuBlocks, LuBot, LuCloudUpload, LuCog, LuCpu, LuDatabase, LuGitBranch, LuLaptop, LuMonitorSmartphone,
+  LuNetwork, LuServer, LuSparkles, LuWaypoints, LuWebhook, LuWorkflow,
 } from 'react-icons/lu';
 import type { ResumeItem, Service, SkillStack, Testimonial } from '@/types/resume';
 import { assetPath } from '@/utils/assetPath';
@@ -36,7 +36,7 @@ export const education: ResumeItem[] = [
     dateClass: 'mr-40',
     date: '2026 - Present',
     href: '#0',
-    title: 'Next Level Web Development',
+    title: 'Next Level Web Development (Batch 7)',
     subtitle: 'Programming Hero',
     last: false,
   },
@@ -50,7 +50,7 @@ export const education: ResumeItem[] = [
   },
   {
     dateClass: 'mr-40',
-    date: '2025 - Present',
+    date: '2025 - 2026',
     href: '#0',
     title: 'Reactive Accelerator Course',
     subtitle: 'Learn with Sumit',
@@ -89,7 +89,7 @@ export const skillStacks: SkillStack[] = [
     icon: LuLaptop,
     color: '#61DAFB',
     description:
-      'Pixel-accurate, accessible interfaces with typed component architecture, predictable state and fast server-rendered pages.',
+      'Building scalable, pixel-perfect and production-ready web applications with React, Next.js, TypeScript, modern state management and API integration.es.',
     featured: true,
     techs: [
       { name: 'React.js', icon: SiReact, color: '#61DAFB' },
@@ -102,6 +102,9 @@ export const skillStacks: SkillStack[] = [
       { name: 'Bootstrap', icon: SiBootstrap, color: '#7952B3' },
       { name: 'Redux', icon: SiRedux, color: '#764ABC' },
       { name: 'TanStack Query', icon: SiReactquery, color: '#FF4154' },
+      { name: 'Angular', icon: SiAngular, color: '#DD0031' },
+      { name: 'Vue.js', icon: SiVuedotjs, color: '#4FC08D' },
+      { name: 'React Native', icon: LuMonitorSmartphone, color: '#61DAFB' },
     ],
   },
   {
@@ -144,7 +147,6 @@ export const skillStacks: SkillStack[] = [
       { name: 'Docker', icon: SiDocker, color: '#2496ED' },
       { name: 'CI/CD', icon: LuWorkflow },
       { name: 'Vercel', icon: SiVercel, color: '#FFFFFF' },
-      { name: 'Coolify', icon: SiCoolify, color: '#6B16ED' },
     ],
   },
   {
@@ -166,36 +168,76 @@ export const skillStacks: SkillStack[] = [
 /** "Services" grid on the home page. */
 export const services: Service[] = [
   {
-    itemClass: 'item md-mb30',
-    letter: 'F',
-    title: 'Frontend Development',
+    itemClass: 'item',
+    letter: 'P',
+    title: 'Pixel-Perfect UI Development',
     description:
-      'Building responsive, high-performance interfaces with React, Next.js and TypeScript.',
-    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-  },
-  {
-    itemClass: 'item md-mb30',
-    letter: 'B',
-    title: 'Backend & APIs',
-    description:
-      'Building secure REST APIs with Node.js and Express, with JWT auth, validation and error handling.',
-    tags: ['Node.js', 'Express.js', 'JWT', 'REST API'],
-  },
-  {
-    itemClass: 'item sm-mb30',
-    letter: 'E',
-    title: 'End-to-End Web Apps',
-    description:
-      'Full-stack apps connecting React and Next.js frontends to Node.js APIs and databases.',
-    tags: ['MongoDB', 'PostgreSQL', 'CRUD', 'Deployment'],
+      'Convert Figma, Adobe XD and design references into pixel-perfect, responsive and production-ready web interfaces while maintaining the original design, spacing, typography and visual details.',
+    tags: ['Figma', 'Adobe XD', 'Responsive UI', 'Pixel-Perfect'],
   },
   {
     itemClass: 'item',
-    letter: 'P',
-    title: 'Performance Optimization',
+    letter: 'R',
+    title: 'React & Next.js Development',
     description:
-      'Improving speed, Core Web Vitals, SEO and accessibility for a better user experience.',
-    tags: ['Core Web Vitals', 'SEO', 'Lazy Loading', 'Accessibility'],
+      'Build scalable, component-based web applications using React.js and Next.js with modern architecture, reusable components, state management and responsive UI.',
+    tags: ['React.js', 'Next.js', 'TypeScript', 'State Management'],
+  },
+  {
+    itemClass: 'item',
+    letter: 'A',
+    title: 'API Integration & Data Management',
+    description:
+      'Integrate REST APIs and manage complex application data using modern tools such as TanStack Query, RTK Query, Redux Toolkit and Context API.',
+    tags: ['REST APIs', 'TanStack Query', 'RTK Query', 'Redux Toolkit'],
+  },
+  {
+    itemClass: 'item',
+    letter: 'L',
+    title: 'Large-Scale Frontend Development',
+    description:
+      'Develop and maintain large frontend applications, dashboards, admin panels and complex UI systems with reusable components, structured architecture and maintainable code.',
+    tags: ['Dashboards', 'Admin Panels', 'Reusable Components', 'Architecture'],
+  },
+  {
+    itemClass: 'item',
+    letter: 'R',
+    title: 'Responsive Web & UI Development',
+    description:
+      'Create responsive web experiences that work consistently across desktop, tablet and mobile devices while maintaining the intended UI/UX.',
+    tags: ['Responsive', 'Mobile-First', 'Cross-Device', 'UI/UX'],
+  },
+  {
+    itemClass: 'item',
+    letter: 'J',
+    title: 'JavaScript Framework Development',
+    description:
+      'Work across the modern JavaScript ecosystem including React, Next.js, Angular and Vue.js, adapting to different project requirements and frontend architectures.',
+    tags: ['React.js', 'Next.js', 'Angular', 'Vue.js'],
+  },
+  {
+    itemClass: 'item',
+    letter: 'R',
+    title: 'React Native Mobile Development',
+    description:
+      'Build modern mobile application interfaces and functionality using React Native while applying reusable component-based development principles.',
+    tags: ['React Native', 'Mobile Apps', 'Component-Based'],
+  },
+  {
+    itemClass: 'item',
+    letter: 'F',
+    title: 'Frontend-to-Full-Stack Development',
+    description:
+      'Develop complete web solutions by connecting modern frontend applications with backend services using Node.js, Express.js, MongoDB and PostgreSQL.',
+    tags: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL'],
+  },
+  {
+    itemClass: 'item',
+    letter: 'A',
+    title: 'AI & MCP-Assisted Development',
+    description:
+      'Use modern AI development tools and MCP-based workflows to accelerate development, improve productivity, explore codebases, automate repetitive tasks and deliver features faster.',
+    tags: ['AI Tools', 'MCP', 'Automation', 'Productivity'],
   },
 ];
 
