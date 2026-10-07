@@ -5,7 +5,7 @@ import {
 } from 'react-icons/si';
 import {
   LuBlocks, LuBot, LuCloudUpload, LuCog, LuCpu, LuDatabase, LuGitBranch, LuLaptop, LuMonitorSmartphone,
-  LuNetwork, LuServer, LuSparkles, LuWaypoints, LuWebhook, LuWorkflow,
+  LuNetwork, LuServer, LuWaypoints, LuWebhook, LuWorkflow,
 } from 'react-icons/lu';
 import type { ResumeItem, Service, SkillStack, Testimonial } from '@/types/resume';
 import { assetPath } from '@/utils/assetPath';
@@ -85,7 +85,7 @@ export const education: ResumeItem[] = [
 /** Technology stacks shown in "Technical Skills & Expertise". */
 export const skillStacks: SkillStack[] = [
   {
-    title: 'Frontend Development',
+    title: 'Frontend Engineering',
     icon: LuLaptop,
     color: '#61DAFB',
     description:
@@ -153,14 +153,15 @@ export const skillStacks: SkillStack[] = [
     title: 'Architecture & AI',
     icon: LuBlocks,
     color: '#C084FC',
-    description: 'Maintainable system design and AI-driven automation, from architecture decisions to agentic workflows.',
+    description:
+      'Building maintainable application structures and leveraging AI to improve development workflows and productivity.',
     techs: [
-      { name: 'Software Architecture', icon: LuBlocks },
-      { name: 'System Design', icon: LuWaypoints },
-      { name: 'AI Integration', icon: LuSparkles },
-      { name: 'AI Agents', icon: LuBot },
-      { name: 'Agentic Development', icon: LuCpu },
-      { name: 'Automation', icon: LuCog },
+      { name: 'Frontend Architecture', icon: LuBlocks },
+      { name: 'Scalable Systems', icon: LuWaypoints },
+      { name: 'API & State Management', icon: LuNetwork },
+      { name: 'MCP Development', icon: LuBot },
+      { name: 'AI Agents', icon: LuCpu },
+      { name: 'Development Automation', icon: LuCog },
     ],
   },
 ];
@@ -169,75 +170,61 @@ export const skillStacks: SkillStack[] = [
 export const services: Service[] = [
   {
     itemClass: 'item',
-    letter: 'P',
-    title: 'Pixel-Perfect UI Development',
+    letter: '01',
+    title: 'Frontend Engineering',
     description:
-      'Convert Figma, Adobe XD and design references into pixel-perfect, responsive and production-ready web interfaces while maintaining the original design, spacing, typography and visual details.',
-    tags: ['Figma', 'Adobe XD', 'Responsive UI', 'Pixel-Perfect'],
+      'Pixel-perfect UI implementation, React.js, Next.js, and scalable frontend applications.',
+    tags: [
+      'Pixel-perfect UI implementation',
+      'React.js / Next.js development',
+      'Large-scale frontend applications',
+      'Component-based architecture',
+      'Modern JavaScript ecosystem',
+    ],
   },
   {
     itemClass: 'item',
-    letter: 'R',
-    title: 'React & Next.js Development',
+    letter: '02',
+    title: 'UI/UX & Responsive Development',
     description:
-      'Build scalable, component-based web applications using React.js and Next.js with modern architecture, reusable components, state management and responsive UI.',
-    tags: ['React.js', 'Next.js', 'TypeScript', 'State Management'],
+      'Responsive, accessible, and user-focused interfaces that work seamlessly across devices.',
+    tags: [
+      'Responsive UI/UX',
+      'Figma → React/Next.js conversion',
+      'Cross-browser compatibility',
+      'Modern CSS / Tailwind CSS',
+      'Performance-focused interfaces',
+    ],
   },
   {
     itemClass: 'item',
-    letter: 'A',
-    title: 'API Integration & Data Management',
+    letter: '03',
+    title: 'Full-Stack & Mobile Development',
     description:
-      'Integrate REST APIs and manage complex application data using modern tools such as TanStack Query, RTK Query, Redux Toolkit and Context API.',
-    tags: ['REST APIs', 'TanStack Query', 'RTK Query', 'Redux Toolkit'],
+      'End-to-end web and mobile application development, from frontend to backend and APIs.',
+    tags: [
+      'REST API integration',
+      'Node.js / Express.js',
+      'MongoDB / PostgreSQL',
+      'Authentication & authorization',
+      'React Native mobile development',
+      'Full-stack application development',
+    ],
   },
   {
     itemClass: 'item',
-    letter: 'L',
-    title: 'Large-Scale Frontend Development',
+    letter: '04',
+    title: 'Modern Development & AI',
     description:
-      'Develop and maintain large frontend applications, dashboards, admin panels and complex UI systems with reusable components, structured architecture and maintainable code.',
-    tags: ['Dashboards', 'Admin Panels', 'Reusable Components', 'Architecture'],
-  },
-  {
-    itemClass: 'item',
-    letter: 'R',
-    title: 'Responsive Web & UI Development',
-    description:
-      'Create responsive web experiences that work consistently across desktop, tablet and mobile devices while maintaining the intended UI/UX.',
-    tags: ['Responsive', 'Mobile-First', 'Cross-Device', 'UI/UX'],
-  },
-  {
-    itemClass: 'item',
-    letter: 'J',
-    title: 'JavaScript Framework Development',
-    description:
-      'Work across the modern JavaScript ecosystem including React, Next.js, Angular and Vue.js, adapting to different project requirements and frontend architectures.',
-    tags: ['React.js', 'Next.js', 'Angular', 'Vue.js'],
-  },
-  {
-    itemClass: 'item',
-    letter: 'R',
-    title: 'React Native Mobile Development',
-    description:
-      'Build modern mobile application interfaces and functionality using React Native while applying reusable component-based development principles.',
-    tags: ['React Native', 'Mobile Apps', 'Component-Based'],
-  },
-  {
-    itemClass: 'item',
-    letter: 'F',
-    title: 'Frontend-to-Full-Stack Development',
-    description:
-      'Develop complete web solutions by connecting modern frontend applications with backend services using Node.js, Express.js, MongoDB and PostgreSQL.',
-    tags: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL'],
-  },
-  {
-    itemClass: 'item',
-    letter: 'A',
-    title: 'AI & MCP-Assisted Development',
-    description:
-      'Use modern AI development tools and MCP-based workflows to accelerate development, improve productivity, explore codebases, automate repetitive tasks and deliver features faster.',
-    tags: ['AI Tools', 'MCP', 'Automation', 'Productivity'],
+      'Faster and smarter product development using modern JavaScript technologies and AI-assisted workflows.',
+    tags: [
+      'JavaScript ecosystem',
+      'Angular / Vue.js',
+      'AI-assisted development',
+      'MCP-powered development workflows',
+      'Modern developer tools',
+      'Faster design-to-code implementation',
+    ],
   },
 ];
 
