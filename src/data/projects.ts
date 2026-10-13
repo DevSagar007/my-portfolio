@@ -172,6 +172,40 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 19,
+    slug: 'falcon',
+    title: 'Falcon',
+    titleClass: 'line-height-1 fz-20 font-weight-600',
+    subtitle: 'E-commerce Product Search & Checkout',
+    image: assetPath('/assets/imgs/works/falcon.png'),
+    imageAlt: 'Falcon Project',
+    href: 'https://falcon-angular-ecommerce.vercel.app/',
+    description:
+      'An Angular storefront with a 520-product catalog, product detail pages, a persistent cart and a validated checkout. I built it with Angular standalone components, signals and SSR prerendering, adding URL-based search, filtering, sorting and pagination, a signals-based cart synced across tabs, Zod-validated reactive forms and SEO-friendly product pages with JSON-LD and a sitemap.',
+    technologies: ['Angular', 'TypeScript', 'Tailwind CSS', 'Angular SSR', 'Signals', 'Zod'],
+    infoCard: {
+      rows: [
+        { label: 'Role:', value: 'Frontend Developer' },
+        { label: 'Backend:', value: 'Mock REST API (Express + Angular SSR)' },
+      ],
+      linkRowClass: 'row mb-15',
+      links: [
+        {
+          colClass: 'col-sm-6 mb-10',
+          href: 'https://falcon-angular-ecommerce.vercel.app/',
+          icon: 'fas fa-external-link-alt mr-5',
+          label: 'Live Website',
+        },
+        {
+          colClass: 'col-sm-6 mb-10',
+          href: 'https://github.com/DevSagar007/falcon-angular-ecommerce',
+          icon: 'fa-brands fa-github mr-5',
+          label: 'Source Code',
+        },
+      ],
+    },
+  },
+  {
     id: 3,
     slug: 'eduman',
     title: 'Eduman',
@@ -387,7 +421,7 @@ export const portfolioTabs: PortfolioTab[] = [
     buttonId: 'protfolio-tab',
     paneId: 'protfolio-tab-pane',
     label: 'All',
-    slugs: ['orvina', 'trustep', 'eduman', 'paradox'],
+    slugs: ['orvina', 'trustep', 'falcon', 'eduman'],
   },
   {
     id: 'html',
@@ -401,7 +435,7 @@ export const portfolioTabs: PortfolioTab[] = [
     buttonId: 'frontend-backend',
     paneId: 'frontend-backend-pane',
     label: 'Frontend Design',
-    slugs: ['inventual', 'solid-ptc', 'hyip-rio', 'digibank'],
+    slugs: ['falcon', 'inventual', 'solid-ptc', 'hyip-rio', 'digibank'],
   },
   {
     id: 'api',
