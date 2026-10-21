@@ -8,6 +8,8 @@ export interface ResumeItem {
   href: string;
   title: string;
   subtitle: string;
+  /** Optional secondary line rendered beneath the entry details. */
+  note?: string;
   /** The last row in each list drops the bottom margin. */
   last: boolean;
 }

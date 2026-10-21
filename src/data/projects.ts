@@ -18,7 +18,7 @@ export const projects: Project[] = [
     href: 'https://orvina.vercel.app/',
     description:
       'A green energy investment and loan platform with separate user and admin portals. I developed the frontend application with Next.js and Tailwind CSS and integrated the REST APIs using Redux Toolkit Query, building JWT authentication, dashboard features, investment management, wallet operations and real-time data handling in a fully responsive UI.',
-    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'Laravel API', 'JWT Auth'],
+    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'REST API', 'JWT Auth'],
     infoCard: {
       rows: [
         { label: 'Role:', value: 'Frontend Developer & API Integration' },
@@ -119,7 +119,7 @@ export const projects: Project[] = [
     href: 'https://trustep.vercel.app/',
     description:
       'A business review and rating platform for reviewers, business owners and admins. I developed the frontend application with Next.js and Tailwind CSS and integrated the REST APIs using Redux Toolkit Query to power company listings, reviews and ratings, authentication, user profiles, search, role-based dashboards and admin moderation.',
-    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'Laravel API', 'Firebase Auth'],
+    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'REST API', 'Firebase Auth'],
     infoCard: {
       rows: [
         { label: 'Role:', value: 'Frontend Developer & API Integration' },

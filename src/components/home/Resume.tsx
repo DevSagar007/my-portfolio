@@ -28,6 +28,7 @@ export default function Resume({ title, scrollIndex, items }: ResumeProps) {
               <a href={item.href}>{item.title}</a>
             </h6>
             <p>{item.subtitle}</p>
+            {item.note && <p className="fz-13 opacity-7 mt-5">{item.note}</p>}
           </div>
           <div className="ml-auto">
             <div className="d-flex align-items-center">
