@@ -56,6 +56,7 @@ export interface Project {
   href: string;
   description: string;
   technologies: string[];
+  status?: string;
   infoCard?: ProjectInfoCard;
   /**
    * A couple of cards were duplicated across filter tabs with slightly

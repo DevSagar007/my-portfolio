@@ -172,6 +172,51 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 20,
+    slug: 'marketflow',
+    title: 'MarketFlow',
+    titleClass: 'line-height-1 fz-20 font-weight-600',
+    subtitle: 'All-in-One Digital Marketing & Automation SaaS',
+    image: assetPath('/assets/imgs/works/marketflow-dashboard.jpg'),
+    imageAlt: 'MarketFlow marketing automation and CRM dashboard preview',
+    href: 'https://marketflow-amber.vercel.app/',
+    description:
+      'MarketFlow is an ongoing full-stack SaaS project focused on digital marketing automation, CRM, WhatsApp messaging, campaign management, and business analytics. It brings customer engagement, marketing operations, and commerce management into one centralized platform.',
+    technologies: [
+      'Next.js',
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Redux Toolkit',
+      'Recharts / ApexCharts',
+      'Responsive UI',
+      'Reusable Components',
+    ],
+    status: 'In Development',
+    infoCard: {
+      rows: [
+        { label: 'Role:', value: 'Full-Stack Developer (Frontend & Backend)' },
+        { label: 'Backend:', value: 'REST API (built by backend developer)' },
+      ],
+      linkRowClass: 'row g-2 mb-15',
+      links: [
+        {
+          colClass: 'col-sm-6',
+          href: 'https://marketflow-amber.vercel.app/',
+          icon: 'fas fa-external-link-alt mr-5',
+          label: 'Live Frontend',
+        },
+        {
+          colClass: 'col-sm-6',
+          href: 'https://marketflow-2eji1uvp.on-forge.com/admin/login',
+          icon: 'fas fa-user-shield mr-5',
+          label: 'Admin Panel',
+        },
+      ],
+    },
+  },
+  {
     id: 19,
     slug: 'falcon',
     title: 'Falcon',
@@ -421,7 +466,7 @@ export const portfolioTabs: PortfolioTab[] = [
     buttonId: 'protfolio-tab',
     paneId: 'protfolio-tab-pane',
     label: 'All',
-    slugs: ['orvina', 'trustep', 'falcon', 'eduman'],
+    slugs: ['orvina', 'trustep', 'marketflow', 'eduman', 'falcon'],
   },
   {
     id: 'html',
@@ -442,7 +487,7 @@ export const portfolioTabs: PortfolioTab[] = [
     buttonId: 'api-tab',
     paneId: 'api-tab-pane',
     label: 'API Implementation',
-    slugs: ['orvina', 'trustep'],
+    slugs: ['orvina', 'trustep', 'marketflow'],
   },
 ];
 

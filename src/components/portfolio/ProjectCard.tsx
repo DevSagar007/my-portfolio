@@ -16,7 +16,7 @@ export default function ProjectCard({ project, tabId }: ProjectCardProps) {
     <div className="col-lg-6">
       <div className="item mt-50">
         <div className="img">
-          <a target="_blank" href={project.href}>
+          <a target="_blank" rel="noopener noreferrer" href={project.href}>
             <img src={project.image} alt={project.imageAlt} className="radius-5" />
           </a>
         </div>
@@ -25,15 +25,21 @@ export default function ProjectCard({ project, tabId }: ProjectCardProps) {
           <div className="d-flex align-items-center mb-15">
             <div>
               <h6 className={project.titleClass}>
-                <a target="_blank" href={project.href}>
+                <a target="_blank" rel="noopener noreferrer" href={project.href}>
                   {project.title}
                 </a>
               </h6>
               <span className="sub-title fz-13 main-color mt-5">{project.subtitle}</span>
+              {project.status ? <span className="tech-badge">{project.status}</span> : null}
             </div>
             <div className="ml-auto">
               <div className="arrow">
-                <a target="_blank" href={project.href}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={project.href}
+                  aria-label={`Open ${project.title} website`}
+                >
                   <ArrowRight />
                 </a>
               </div>
@@ -64,7 +70,7 @@ export default function ProjectCard({ project, tabId }: ProjectCardProps) {
               <div className={infoCard.linkRowClass}>
                 {infoCard.links.map((link) => (
                   <div className={link.colClass} key={link.href}>
-                    <a target="_blank" href={link.href} className="info-link-btn">
+                    <a target="_blank" rel="noopener noreferrer" href={link.href} className="info-link-btn">
                       <i className={link.icon}></i>
                       {` ${link.label}`}
                     </a>
