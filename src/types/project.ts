@@ -40,8 +40,8 @@ export interface ProjectInfoCard {
   };
 }
 
-/** The four filter tabs shown above the portfolio grid. */
-export type PortfolioTabId = 'all' | 'html' | 'frontend' | 'api';
+/** The filter tabs shown above the portfolio grid. */
+export type PortfolioTabId = 'all' | 'professional' | 'html' | 'frontend' | 'api';
 
 export interface Project {
   id: number;

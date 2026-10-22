@@ -8,6 +8,35 @@ import { assetPath } from '@/utils/assetPath';
  */
 export const projects: Project[] = [
   {
+    id: 21,
+    slug: 'tdevs',
+    title: 'TDevs',
+    titleClass: 'line-height-1 fz-20 font-weight-600',
+    subtitle: 'Professional Software Development Company Website',
+    image: assetPath('/assets/imgs/works/tdevs.png'),
+    imageAlt: 'TDevs software development company website homepage preview',
+    href: 'https://tdevs.co/',
+    description:
+      'Developed the frontend of TDevs, a professional software development company website featuring service pages, digital product listings, interactive navigation, and responsive layouts. Focused on delivering modern, user-friendly interfaces and a consistent browsing experience across devices.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'jQuery', 'Fully Responsive'],
+    status: 'Live',
+    infoCard: {
+      rows: [
+        { label: 'Role:', value: 'Frontend Developer' },
+        { label: 'Scope:', value: 'Frontend UI, responsive layouts & interactions' },
+      ],
+      linkRowClass: 'row mb-15',
+      links: [
+        {
+          colClass: 'col-sm-6 mb-10',
+          href: 'https://tdevs.co/',
+          icon: 'fas fa-external-link-alt mr-5',
+          label: 'Live Website',
+        },
+      ],
+    },
+  },
+  {
     id: 1,
     slug: 'orvina',
     title: 'Orvina',
@@ -466,7 +495,14 @@ export const portfolioTabs: PortfolioTab[] = [
     buttonId: 'protfolio-tab',
     paneId: 'protfolio-tab-pane',
     label: 'All',
-    slugs: ['orvina', 'trustep', 'marketflow', 'eduman', 'falcon'],
+    slugs: ['orvina', 'trustep', 'tdevs', 'eduman', 'marketflow', 'falcon'],
+  },
+  {
+    id: 'professional',
+    buttonId: 'professional-tab',
+    paneId: 'professional-tab-pane',
+    label: 'Professional Website',
+    slugs: ['tdevs'],
   },
   {
     id: 'html',
