@@ -44,7 +44,7 @@ export interface ProjectInfoCard {
  * The filter tabs shown above the portfolio grid. The ids double as the
  * `?tab=` query value on the projects page, so existing ids must stay stable.
  */
-export type PortfolioTabId = 'all' | 'web-applications' | 'html' | 'frontend' | 'api';
+export type PortfolioTabId = 'all' | 'web-applications' | 'professional' | 'html' | 'frontend' | 'api';
 
 export interface Project {
   id: number;
@@ -59,6 +59,7 @@ export interface Project {
   href: string;
   description: string;
   technologies: string[];
+  status?: string;
   infoCard?: ProjectInfoCard;
   /**
    * A couple of cards were duplicated across filter tabs with slightly

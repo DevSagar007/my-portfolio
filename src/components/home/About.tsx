@@ -1,4 +1,4 @@
-import { profile } from '@/data/site';
+import { profile } from "@/data/site";
 
 export default function About() {
   return (
@@ -29,8 +29,6 @@ export default function About() {
                 <br /> Completed
               </p>
             </div>
-
-            
           </div>
           <div>
             <div className="butn-presv">
@@ -48,16 +46,23 @@ export default function About() {
       <div className="text mt-80">
         <h6 className="sub-title mb-15">About Me</h6>
         <p className="fz-18">
-          I&apos;m <strong>Md Sagor Hossen</strong>, a Frontend-Focused Full-Stack Engineer with 4+
-          years of experience building responsive, scalable, and user-focused web applications. My
-          strongest expertise is in{' '}
-          <strong>
-            React.js, Next.js, TypeScript, Redux, TanStack Query, and Tailwind CSS
+          I&apos;m<strong> Md Sagor Hossen </strong>, a
+          <strong> Frontend-Focused Full-Stack Engineer</strong> with
+          <strong> 4+ years of experience</strong> building responsive, scalable,
+          and user-focused web applications.
+          <br />
+          My strongest expertise is in
+          <strong> React.js, Next.js, TypeScript, Redux, TanStack Query, and Tailwind
+            CSS
           </strong>
-          , with experience in React Native for mobile application development. I also build backend
-          systems with Node.js, Express.js, REST APIs, JWT authentication, MongoDB, and PostgreSQL,
-          covering everything from API integration and database operations to validation and
-          deployment.
+          , with experience in <strong>React Native</strong> for mobile
+          application development.
+          <br />I also build backend systems with
+          <strong> Node.js, Express.js, REST APIs, JWT authentication, MongoDB, and
+            PostgreSQL
+          </strong>
+          , covering everything from API integration and database operations to
+          validation and deployment.
         </p>
       </div>
     </div>

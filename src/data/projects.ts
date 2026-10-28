@@ -8,6 +8,35 @@ import { assetPath } from '@/utils/assetPath';
  */
 export const projects: Project[] = [
   {
+    id: 21,
+    slug: 'tdevs',
+    title: 'TDevs',
+    titleClass: 'line-height-1 fz-20 font-weight-600',
+    subtitle: 'Professional Software Development Company Website',
+    image: assetPath('/assets/imgs/works/tdevs.png'),
+    imageAlt: 'TDevs software development company website homepage preview',
+    href: 'https://tdevs.co/',
+    description:
+      'Developed the frontend of TDevs, a professional software development company website featuring service pages, digital product listings, interactive navigation, and responsive layouts. Focused on delivering modern, user-friendly interfaces and a consistent browsing experience across devices.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'Bootstrap 5.x', 'JavaScript', 'jQuery', 'Fully Responsive'],
+    status: 'Live',
+    infoCard: {
+      rows: [
+        { label: 'Role:', value: 'Frontend Developer' },
+        { label: 'Scope:', value: 'Frontend UI, responsive layouts & interactions' },
+      ],
+      linkRowClass: 'row mb-15',
+      links: [
+        {
+          colClass: 'col-sm-6 mb-10',
+          href: 'https://tdevs.co/',
+          icon: 'fas fa-external-link-alt mr-5',
+          label: 'Live Website',
+        },
+      ],
+    },
+  },
+  {
     id: 1,
     slug: 'orvina',
     title: 'Orvina',
@@ -177,28 +206,44 @@ export const projects: Project[] = [
     title: 'MarketFlow',
     titleClass: 'line-height-1 fz-20 font-weight-600',
     subtitle: 'All-in-One Digital Marketing & Automation SaaS',
-    image: assetPath('/assets/imgs/works/marketflow.png'),
-    imageAlt: 'MarketFlow Project',
+    image: assetPath('/assets/imgs/works/marketflow-dashboard.jpg'),
+    imageAlt: 'MarketFlow marketing automation and CRM dashboard preview',
     href: 'https://marketflow-amber.vercel.app/',
     description:
-      'MarketFlow is an all-in-one digital marketing, CRM, WhatsApp automation and commerce SaaS platform. Built with Next.js, React, TypeScript, Tailwind CSS and shadcn/ui, it brings together WhatsApp automation, CRM and lead management, products and orders, email and SMS campaigns, a shared customer inbox, analytics and reporting, integrations and team management.',
+      'MarketFlow is an ongoing full-stack SaaS project focused on digital marketing automation, CRM, WhatsApp messaging, campaign management, and business analytics. It brings customer engagement, marketing operations, and commerce management into one centralized platform.',
     technologies: [
-      'Next.js', 'React.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Redux', 'TanStack Query', 'Axios',
-      'Recharts', 'ApexCharts', 'Framer Motion', 'Vercel',
+      'Next.js',
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Redux Toolkit',
+      'Recharts / ApexCharts',
+      'Responsive UI',
+      'Reusable Components',
     ],
-  },
-  {
-    id: 21,
-    slug: 'tdevs',
-    title: 'TDevs',
-    titleClass: 'line-height-1 fz-20 font-weight-600',
-    subtitle: 'Corporate Website & Digital Services Platform',
-    image: assetPath('/assets/imgs/works/tdevs.png'),
-    imageAlt: 'TDevs Project',
-    href: 'https://tdevs.co/',
-    description:
-      'TDevs is a corporate website and digital services platform presenting software, app, UI/UX, SaaS, DevOps and AI agent development services alongside a catalog of ready-made products. Built with HTML5, CSS3, SCSS, Bootstrap 5, JavaScript and jQuery plugins in a clean, fully responsive layout.',
-    technologies: ['HTML5 / CSS3', 'SCSS', 'JavaScript', 'jQuery', 'jQuery Plugins', 'Bootstrap 5.x', 'Git'],
+    status: 'In Development',
+    infoCard: {
+      rows: [
+        { label: 'Role:', value: 'Full-Stack Developer (Frontend & Backend)' },
+        { label: 'Backend:', value: 'REST API (built by backend developer)' },
+      ],
+      linkRowClass: 'row g-2 mb-15',
+      links: [
+        {
+          colClass: 'col-sm-6',
+          href: 'https://marketflow-amber.vercel.app/',
+          icon: 'fas fa-external-link-alt mr-5',
+          label: 'Live Frontend',
+        },
+        {
+          colClass: 'col-sm-6',
+          href: 'https://marketflow-2eji1uvp.on-forge.com/admin/login',
+          icon: 'fas fa-user-shield mr-5',
+          label: 'Admin Panel',
+        },
+      ],
+    },
   },
   {
     id: 19,
@@ -474,6 +519,14 @@ export const portfolioTabs: PortfolioTab[] = [
     label: 'Web Applications',
     collectionLabel: 'Web Applications',
     matches: isWebApplication,
+  },
+  {
+    id: 'professional',
+    buttonId: 'professional-tab',
+    paneId: 'professional-tab-pane',
+    label: 'Professional Website',
+    collectionLabel: 'Professional Websites',
+    slugs: ['tdevs'],
   },
   {
     id: 'html',

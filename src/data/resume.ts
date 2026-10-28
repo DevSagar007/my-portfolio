@@ -16,7 +16,7 @@ export const experience: ResumeItem[] = [
     dateClass: 'mr-45',
     date: 'Apr 2024 - Present',
     href: '#0',
-    title: 'Frontend Web Developer',
+    title: 'Frontend-Focused Full-Stack Engineer',
     subtitle: 'Tdevs.co',
     last: false,
   },
@@ -78,6 +78,7 @@ export const education: ResumeItem[] = [
     href: 'https://www.adust.edu.bd',
     title: 'B.Sc. in Computer Science & Engineering (CSE) Atish Dipankar University of Science & Technology',
     subtitle: '(Currently Studying)',
+    note: 'Academic Foundation: C programming fundamentals and basic problem-solving through university coursework.',
     last: true,
   },
 ];
