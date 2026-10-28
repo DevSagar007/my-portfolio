@@ -110,6 +110,46 @@ body.page-transitioning main {
   transform: translateY(-4px);
 }
 
+.portfolio .project-card {
+  position: relative;
+}
+
+/* "In Development" ribbon pinned over the thumbnail's top-right corner. */
+.project-status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #ffc857;
+  background: rgba(20, 20, 20, 0.82);
+  border: 1px solid rgba(255, 200, 87, 0.45);
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+.project-status__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffc857;
+  animation: project-status-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes project-status-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 200, 87, 0.6); }
+  50% { box-shadow: 0 0 0 4px rgba(255, 200, 87, 0); }
+}
+
 .project-card__media {
   display: block;
   aspect-ratio: 1290 / 686;
@@ -440,4 +480,5 @@ html:has(.project-dialog[open]) {
   .portfolio .project-card:focus-within { transform: none; }
   .project-card__media img,
   .project-card:hover .project-card__media img { transition: none; transform: none; }
+  .project-status__dot { animation: none; }
 }

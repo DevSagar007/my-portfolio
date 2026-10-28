@@ -93,6 +93,8 @@ export default function Portfolio({ sectionClassName, scrollIndex, fullCatalog =
 
   const activeTab = getPortfolioTab(active) ?? portfolioTabs[0];
   const href = projectsHref(activeTab.id);
+  // "View All" only earns its place when the preview is hiding some projects.
+  const hasMore = getProjectsForTab(activeTab).length > PREVIEW_LIMIT;
 
   const openProjects = (event: React.MouseEvent<HTMLAnchorElement>) => {
     // Let modified clicks (new tab / window) behave like a normal link.
@@ -162,7 +164,7 @@ export default function Portfolio({ sectionClassName, scrollIndex, fullCatalog =
           })}
         </div>
 
-        {!fullCatalog ? <div className="row">
+        {!fullCatalog && hasMore ? <div className="row">
           <div className="col-xxl-12">
             <div className="butn-presv text-center mt-60">
               <Link

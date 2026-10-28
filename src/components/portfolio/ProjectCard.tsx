@@ -36,6 +36,8 @@ export default function ProjectCard({ project, tabId }: ProjectCardProps) {
   ];
   const badges = project.technologies.slice(0, VISIBLE_BADGES);
   const hiddenBadges = project.technologies.slice(VISIBLE_BADGES);
+  // Only work-in-progress projects get a ribbon; finished ones need no label.
+  const inDevelopment = /development/i.test(project.status ?? '');
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -57,6 +59,12 @@ export default function ProjectCard({ project, tabId }: ProjectCardProps) {
         >
           <img src={project.image} alt={project.imageAlt} loading="lazy" />
         </a>
+        {inDevelopment ? (
+          <span className="project-status">
+            <span className="project-status__dot" aria-hidden="true"></span>
+            {project.status}
+          </span>
+        ) : null}
 
         <div className="cont project-card__body">
           <div className="project-card__head">
