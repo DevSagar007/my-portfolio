@@ -521,14 +521,6 @@ export const portfolioTabs: PortfolioTab[] = [
     matches: isWebApplication,
   },
   {
-    id: 'professional',
-    buttonId: 'professional-tab',
-    paneId: 'professional-tab-pane',
-    label: 'Professional Website',
-    collectionLabel: 'Professional Websites',
-    slugs: ['tdevs'],
-  },
-  {
     id: 'html',
     buttonId: 'profile-tab',
     paneId: 'profile-tab-pane',
