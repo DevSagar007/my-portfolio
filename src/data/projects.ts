@@ -18,7 +18,7 @@ export const projects: Project[] = [
     href: 'https://orvina.vercel.app/',
     description:
       'A green energy investment and loan platform with separate user and admin portals. I developed the frontend application with Next.js and Tailwind CSS and integrated the REST APIs using Redux Toolkit Query, building JWT authentication, dashboard features, investment management, wallet operations and real-time data handling in a fully responsive UI.',
-    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'Laravel API', 'JWT Auth'],
+    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'REST API', 'JWT Auth'],
     infoCard: {
       rows: [
         { label: 'Role:', value: 'Frontend Developer & API Integration' },
@@ -119,7 +119,7 @@ export const projects: Project[] = [
     href: 'https://trustep.vercel.app/',
     description:
       'A business review and rating platform for reviewers, business owners and admins. I developed the frontend application with Next.js and Tailwind CSS and integrated the REST APIs using Redux Toolkit Query to power company listings, reviews and ratings, authentication, user profiles, search, role-based dashboards and admin moderation.',
-    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'Laravel API', 'Firebase Auth'],
+    technologies: ['Next.js', 'Tailwind CSS', 'RTK Query', 'REST API', 'Firebase Auth'],
     infoCard: {
       rows: [
         { label: 'Role:', value: 'Frontend Developer & API Integration' },
@@ -170,6 +170,35 @@ export const projects: Project[] = [
         ],
       },
     },
+  },
+  {
+    id: 20,
+    slug: 'marketflow',
+    title: 'MarketFlow',
+    titleClass: 'line-height-1 fz-20 font-weight-600',
+    subtitle: 'All-in-One Digital Marketing & Automation SaaS',
+    image: assetPath('/assets/imgs/works/marketflow.png'),
+    imageAlt: 'MarketFlow Project',
+    href: 'https://marketflow-amber.vercel.app/',
+    description:
+      'MarketFlow is an all-in-one digital marketing, CRM, WhatsApp automation and commerce SaaS platform. Built with Next.js, React, TypeScript, Tailwind CSS and shadcn/ui, it brings together WhatsApp automation, CRM and lead management, products and orders, email and SMS campaigns, a shared customer inbox, analytics and reporting, integrations and team management.',
+    technologies: [
+      'Next.js', 'React.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Redux', 'TanStack Query', 'Axios',
+      'Recharts', 'ApexCharts', 'Framer Motion', 'Vercel',
+    ],
+  },
+  {
+    id: 21,
+    slug: 'tdevs',
+    title: 'TDevs',
+    titleClass: 'line-height-1 fz-20 font-weight-600',
+    subtitle: 'Corporate Website & Digital Services Platform',
+    image: assetPath('/assets/imgs/works/tdevs.png'),
+    imageAlt: 'TDevs Project',
+    href: 'https://tdevs.co/',
+    description:
+      'TDevs is a corporate website and digital services platform presenting software, app, UI/UX, SaaS, DevOps and AI agent development services alongside a catalog of ready-made products. Built with HTML5, CSS3, SCSS, Bootstrap 5, JavaScript and jQuery plugins in a clean, fully responsive layout.',
+    technologies: ['HTML5 / CSS3', 'SCSS', 'JavaScript', 'jQuery', 'jQuery Plugins', 'Bootstrap 5.x', 'Git'],
   },
   {
     id: 19,
@@ -415,19 +444,43 @@ export const projects: Project[] = [
   },
 ];
 
+/** Frameworks that put a project in the combined "Web Applications" tab. */
+const WEB_APPLICATION_TECH = /^(angular|react(\.js)?|next\.js)$/i;
+
+/** Projects shown under "Web Applications" although they use none of the frameworks above. */
+const WEB_APPLICATION_EXTRAS = ['tdevs'];
+
+export const isWebApplication = (project: Project): boolean =>
+  WEB_APPLICATION_EXTRAS.includes(project.slug) ||
+  project.technologies.some((tech) => WEB_APPLICATION_TECH.test(tech.trim()));
+
+/**
+ * The portfolio filter tabs, shared by the home page preview and the full
+ * projects page. A tab lists either curated `slugs` or a `matches` rule;
+ * "All" has neither and shows every project.
+ */
 export const portfolioTabs: PortfolioTab[] = [
   {
     id: 'all',
     buttonId: 'protfolio-tab',
     paneId: 'protfolio-tab-pane',
     label: 'All',
-    slugs: ['orvina', 'trustep', 'falcon', 'eduman'],
+    collectionLabel: 'Projects',
+  },
+  {
+    id: 'web-applications',
+    buttonId: 'web-applications-tab',
+    paneId: 'web-applications-tab-pane',
+    label: 'Web Applications',
+    collectionLabel: 'Web Applications',
+    matches: isWebApplication,
   },
   {
     id: 'html',
     buttonId: 'profile-tab',
     paneId: 'profile-tab-pane',
     label: 'HTML Template',
+    collectionLabel: 'HTML Templates',
     slugs: ['eduman', 'paradox', 'finwise', 'banana', 'businoz', 'dairy-farm', 'expovent-dashboard', 'eurtech', 'medivibes', 'axil', 'dogri', 'digitek'],
   },
   {
@@ -435,6 +488,7 @@ export const portfolioTabs: PortfolioTab[] = [
     buttonId: 'frontend-backend',
     paneId: 'frontend-backend-pane',
     label: 'Frontend Design',
+    collectionLabel: 'Frontend Design Projects',
     slugs: ['falcon', 'inventual', 'solid-ptc', 'hyip-rio', 'digibank'],
   },
   {
@@ -442,15 +496,25 @@ export const portfolioTabs: PortfolioTab[] = [
     buttonId: 'api-tab',
     paneId: 'api-tab-pane',
     label: 'API Implementation',
-    slugs: ['orvina', 'trustep'],
+    collectionLabel: 'API Implementation Projects',
+    slugs: ['orvina', 'trustep', 'marketflow'],
   },
 ];
 
 export const getProjectBySlug = (slug: string): Project | undefined =>
   projects.find((project) => project.slug === slug);
 
-export const getProjectsForTab = (slugs: string[]): Project[] =>
-  slugs
-    .map((slug) => getProjectBySlug(slug))
-    .filter((project): project is Project => Boolean(project));
+export const getPortfolioTab = (id: string | null | undefined): PortfolioTab | undefined =>
+  portfolioTabs.find((tab) => tab.id === id);
 
+/** Unique projects belonging to a tab, in the tab's display order. */
+export const getProjectsForTab = (tab: PortfolioTab): Project[] => {
+  if (tab.slugs) {
+    const slugs = Array.from(new Set(tab.slugs));
+    return slugs
+      .map((slug) => getProjectBySlug(slug))
+      .filter((project): project is Project => Boolean(project));
+  }
+
+  return tab.matches ? projects.filter(tab.matches) : projects;
+};

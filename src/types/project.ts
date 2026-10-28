@@ -40,8 +40,11 @@ export interface ProjectInfoCard {
   };
 }
 
-/** The four filter tabs shown above the portfolio grid. */
-export type PortfolioTabId = 'all' | 'html' | 'frontend' | 'api';
+/**
+ * The filter tabs shown above the portfolio grid. The ids double as the
+ * `?tab=` query value on the projects page, so existing ids must stay stable.
+ */
+export type PortfolioTabId = 'all' | 'web-applications' | 'html' | 'frontend' | 'api';
 
 export interface Project {
   id: number;
@@ -72,6 +75,10 @@ export interface PortfolioTab {
   /** DOM id of the tab pane, kept from the original markup. */
   paneId: string;
   label: string;
-  /** Project slugs shown in this tab, in the original order. */
-  slugs: string[];
+  /** Plural name used by the "View All ..." button, e.g. "Web Applications". */
+  collectionLabel: string;
+  /** Curated project slugs shown in this tab, in the original order. */
+  slugs?: string[];
+  /** Rule-based membership, used instead of `slugs` (e.g. by technology). */
+  matches?: (project: Project) => boolean;
 }
