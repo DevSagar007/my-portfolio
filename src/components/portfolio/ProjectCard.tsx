@@ -114,7 +114,7 @@ export default function ProjectCard({ project, tabId }: ProjectCardProps) {
           <div className="project-card__actions">
             <div className={`project-card__links${links.length > 1 ? ' is-split' : ''}`}>
               {links.map((link) => (
-                <a target="_blank" rel="noopener noreferrer" href={link.href} className="info-link-btn" key={link.href}>
+                <a target="_blank" rel="noopener noreferrer" href={link.href} className="info-link-btn" key={`${link.label}-${link.href}`}>
                   <i className={link.icon} aria-hidden="true"></i>
                   <span>{link.label}</span>
                 </a>
@@ -176,7 +176,7 @@ export default function ProjectCard({ project, tabId }: ProjectCardProps) {
 
               <div className={`project-card__links${links.length > 1 ? ' is-split' : ''}`}>
                 {links.map((link) => (
-                  <a target="_blank" rel="noopener noreferrer" href={link.href} className="info-link-btn" key={link.href}>
+                  <a target="_blank" rel="noopener noreferrer" href={link.href} className="info-link-btn" key={`${link.label}-${link.href}`}>
                     <i className={link.icon} aria-hidden="true"></i>
                     <span>{link.label}</span>
                   </a>

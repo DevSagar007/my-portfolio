@@ -484,12 +484,16 @@ html:has(.project-dialog[open]) {
 }
 
 /* Resume lists ("Working Experience", "Education & Certifications"). Keep the
-   date pill on one line and let long titles wrap instead of overflowing. */
+   date pill on one line and let long titles wrap instead of overflowing. The
+   date column has a fixed width so every title starts on the same line,
+   whatever the length of its date; it overrides the per-item mr-40 / mr-45. */
 .resume .item .date {
-  flex-shrink: 0;
+  flex: 0 0 180px;
+  margin-right: 0 !important;
 }
 
 .resume .item .date p {
+  display: inline-block;
   white-space: nowrap;
 }
 
@@ -520,12 +524,8 @@ html:has(.project-dialog[open]) {
   }
 
   .resume .item .date {
-    width: 100%;
+    flex-basis: 100%;
     margin: 0 0 12px !important;
-  }
-
-  .resume .item .date p {
-    display: inline-block;
   }
 
   .resume .item .resume__aside {
