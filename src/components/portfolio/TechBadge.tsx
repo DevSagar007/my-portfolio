@@ -2,7 +2,7 @@ import type { IconType } from 'react-icons';
 import { LuActivity, LuChartColumn, LuChartLine, LuCode, LuMonitorSmartphone, LuServer } from 'react-icons/lu';
 import {
   SiAngular, SiAxios, SiBootstrap, SiFirebase, SiFramer, SiGit, SiHtml5, SiJavascript, SiJquery, SiJsonwebtokens,
-  SiMui, SiNextdotjs, SiReact, SiReactquery, SiRedux, SiSass, SiShadcnui, SiTailwindcss, SiTypescript,
+  SiLaravel, SiMui, SiMysql, SiNextdotjs, SiPhp, SiReact, SiReactquery, SiRedux, SiSass, SiShadcnui, SiTailwindcss, SiTypescript,
   SiVercel, SiZod,
 } from 'react-icons/si';
 
@@ -36,6 +36,9 @@ const TECH_ICONS: Record<string, IconType> = {
   Axios: SiAxios,
   'Framer Motion': SiFramer,
   Vercel: SiVercel,
+  Laravel: SiLaravel,
+  PHP: SiPhp,
+  MySQL: SiMysql,
   'Fully Responsive': LuMonitorSmartphone,
 };
 
