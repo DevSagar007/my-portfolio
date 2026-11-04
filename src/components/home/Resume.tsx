@@ -23,14 +23,14 @@ export default function Resume({ title, scrollIndex, items }: ResumeProps) {
           <div className={`date ${item.dateClass}`}>
             <p className="fz-13">{item.date}</p>
           </div>
-          <div className="w-auto">
+          <div className="resume__info w-auto">
             <h6 className="mb-5">
               <a href={item.href}>{item.title}</a>
             </h6>
             <p>{item.subtitle}</p>
             {item.note && <p className="fz-13 opacity-7 mt-5">{item.note}</p>}
           </div>
-          <div className="ml-auto">
+          <div className="resume__aside ml-auto">
             <div className="d-flex align-items-center">
               <div className="icon-img-40 mr-80"></div>
               <div className="arrow">

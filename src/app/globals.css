@@ -482,3 +482,99 @@ html:has(.project-dialog[open]) {
   .project-card:hover .project-card__media img { transition: none; transform: none; }
   .project-status__dot { animation: none; }
 }
+
+/* Resume lists ("Working Experience", "Education & Certifications"). Keep the
+   date pill on one line and let long titles wrap instead of overflowing. */
+.resume .item .date {
+  flex-shrink: 0;
+}
+
+.resume .item .date p {
+  white-space: nowrap;
+}
+
+.resume .item .resume__info {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.resume .item .resume__aside {
+  flex-shrink: 0;
+  padding-left: 20px;
+}
+
+/* The empty spacer before the arrow only makes sense on wide layouts. */
+@media screen and (max-width: 991px) {
+  .resume .item .resume__aside .icon-img-40 {
+    display: none;
+  }
+}
+
+/* Phones: stack the date above the title and drop the decorative arrow so the
+   text gets the full row. */
+@media screen and (max-width: 767px) {
+  .resume .item {
+    flex-wrap: wrap;
+    align-items: flex-start !important;
+  }
+
+  .resume .item .date {
+    width: 100%;
+    margin: 0 0 12px !important;
+  }
+
+  .resume .item .date p {
+    display: inline-block;
+  }
+
+  .resume .item .resume__aside {
+    display: none;
+  }
+
+  .resume .item h6 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+/* Section spacing on phones only; tablets and desktops keep the theme's
+   spacing. Covers page sections, the stacked blocks in the profile column
+   (About -> Experience -> Education -> Skills) and the gap under headings. */
+@media screen and (max-width: 767px) {
+  :root {
+    --section-space: 80px;
+    --block-space: 60px;
+    --sec-head-space: 40px;
+  }
+
+  .section-padding {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
+  }
+
+  .box .about.section-padding {
+    padding-top: var(--block-space);
+  }
+
+  .box .about.section-padding,
+  .box .resume.section-padding {
+    padding-bottom: var(--block-space);
+  }
+
+  .sec-head.mb-80 {
+    margin-bottom: var(--sec-head-space) !important;
+  }
+
+  .about .mt-80 {
+    margin-top: var(--sec-head-space) !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  :root {
+    --section-space: 64px;
+    --block-space: 50px;
+    --sec-head-space: 32px;
+  }
+}
